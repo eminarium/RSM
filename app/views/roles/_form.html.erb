@@ -1,0 +1,67 @@
+<%= form_for(@role) do |f| %>
+  <% if @role.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@role.errors.count, "error") %> prohibited this role from being saved:</h2>
+
+      <ul>
+      <% @role.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= "Object" %></th>
+        <th><%= "Can Create" %></th>
+        <th><%= "Can Read" %></th>
+        <th><%= "Can Update" %></th>
+        <th><%= "Can Delete" %></th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+
+      <% @mod_objects.each do |mod_object| %>
+          <tr>
+            <td><i><b><%= f.label mod_object.name + " : " %></b></i></td>
+
+          <% #if (@role.mod_objects_roles.where("mod_object_id = ?", mod_object.id).empty?) %>
+          <% if (!@role.mod_objects_roles.find_by_mod_object_id(mod_object.id)) %>
+
+              <td><%= check_box_tag "MObj["+mod_object.name+'][canCreate]' %></td>
+              <td><%= check_box_tag "MObj["+mod_object.name+'][canRead]' %></td>
+              <td><%= check_box_tag "MObj["+mod_object.name+'][canUpdate]' %></td>
+              <td><%= check_box_tag "MObj["+mod_object.name+'][canDelete]' %></td>
+
+          <% else %>
+
+              <% #temp = @role.mod_objects_roles.where("mod_object_id = ?", mod_object.id)[0] %>
+              <% temp = @role.mod_objects_roles.find_by_mod_object_id(mod_object.id) %>
+                <td><%= check_box_tag "MObj["+mod_object.name+'][canCreate]', temp.canCreate, temp.canCreate %></td>
+                <td><%= check_box_tag "MObj["+mod_object.name+'][canRead]', temp.canRead, temp.canRead %></td>
+                <td><%= check_box_tag "MObj["+mod_object.name+'][canUpdate]', temp.canUpdate, temp.canUpdate %></td>
+                <td><%= check_box_tag "MObj["+mod_object.name+'][canDelete]', temp.canDelete, temp.canDelete %></td>
+
+          <% end %>
+        </div>
+
+          <tr>
+      <% end %>
+
+      </tbody>
+      </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

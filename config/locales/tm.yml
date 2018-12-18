@@ -1,0 +1,268 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+tm:
+
+  date:
+    order:
+      - "year"
+      - "month"
+      - "day"
+
+
+  activerecord:
+
+    models:
+      brand:          "marka"
+      color:          "reňk"
+      customer:       "müşderi"
+      equipment_type: "enjam görnüşi"
+      item:           "enjam"
+      model:          "model"
+      service:        "hyzmat"
+      ticket:         "bilet"
+      user:           "ulanyjy"
+
+    attributes:
+      brand:
+        brandName:    "Markanyň ady"
+      color:
+        colorName:    "Reňkiň ady"
+        colorRGBCode: "Reňkiň RGB kody"
+      customer:
+        custFName:        "Müşderiniň ady"
+        custLName:        "Familiýasy"
+        custPatronymic:   "Atasynyň ady"
+        custEmail:        "E-maili"
+        custPhoneHome:    "Öý nomeri"
+        custPhoneOffice:  "Işdäki nomeri"
+        custPhoneMobile1: "Mobil telefonyň nomeri №1"
+        custPhoneMobile2: "Mobil telefonyň nomeri №2"
+        custAddressHome:  "Öý adresi"
+        custAddressOffice: "Iş ýeriniň adresi"
+        custDescription:  "Teswiri"
+      equipment_type:
+        equipmentTypeName: "Enjam görnüşi"
+        equipmentTypeDesc: "Enjam görnüşiniň teswiri"
+      item:
+        itemName:        "Enjam ady"
+        itemPrice:       "Enjam bahasy"
+        itemDescription: "Enjam aýratynlyklary"
+      model:
+        modelName:  "Model ady"
+        brand_id:   "Markasy"
+      service:
+        serviceName:        "Hyzmatyň ady"
+        servicePrice:       "Hyzmatyň bahasy"
+        serviceDescription: "Hyzmatyň teswiri"
+      ticket:
+        customer_id:             "Müşderi ady"
+        user_id:                 "Berkidilýän kişi"
+        equipmentType_id:        "Enjam görnüşleri"
+        ticketItemSerialNum:     "Seriýa belgisi"
+        brand_id:                "Marka"
+        model_id:                "Model"
+        color_id:                "Reňk"
+        ticketItemDesc:          "Enjam teswiri"
+        ticketAcceptDateTime:    "Getirilen wagty"
+        ticketPredictionDateTime: "Taýýar boljak wagty"
+        ticketReadyDateTime:     "Taýýar bolan wagty"
+        ticketProblemDesc:       "Problemmaň teswiri"
+        ticketSolutionDesc:      "Çözgüdiň teswiri"
+      user:
+        userLogin:        "Ulanyjy Ady"
+        userFName:        "Ady"
+        userLName:        "Familiýasy"
+        userEmail:        "E-mail"
+        userPhoneHome:    "Telefon (Öý)"
+        userPhoneMobile1: "Telefon (Mobil-1)"
+        userPhoneMobile2: "PTelefon (Mobil-2)"
+        userAddress:      "Salgysy"
+        userDescription:  "Bellikler"
+        password:         "Parol"
+        password_confirmation: "Paroly gaýtalaň"
+
+
+  helpers:
+    submit:
+      create: "Döret"
+      update: "Üýtget"
+
+
+  brand:
+    brandName:  "Markanyň ady"
+    NewBrand:   "Täze marka döret"
+  brands_index: "Markalaryň sanawy"
+  brands_new:   "Täze marka döret"
+  brands_edit:  "Marka üýtget"
+  brands_show:  "Marka maglumatlary"
+  brands_create: "Täze marka döret"
+
+
+  color:
+    colorName:    "Reňkiň ady"
+    colorRGBCode: "RGB kody"
+    NewColor:     "Täze reňk döret"
+  colors_index:   "Reňk sanawy"
+  colors_new:     "Reňk döret"
+  colors_edit:    "Reňk üýtget"
+  colors_show:    "Reňgi giňişleýin görkez"
+
+
+  customer:
+    custFName:        "Müşderiniň ady"
+    custLName:        "Müşderiniň familiýasy"
+    custPatronymic:   "Müşderiniň atasynyň ady"
+    custEmail:        "Müşderiniň e-maili"
+    custPhoneHome:    "Müşderiniň öý nomeri"
+    custPhoneOffice:  "Müşderiniň işdäki nomeri"
+    custPhoneMobile1: "Müşderiniň mobil telefonyň nomeri №1"
+    custPhoneMobile2: "Müşderiniň mobil telefonyň nomeri №2"
+    custAddressHome:  "Müşderiniň öý adresi"
+    custAddressOffice: "Müşderiniň iş ýeriniň adresi"
+    custDescription:  "Müşderiniň teswiri"
+    NewCustomer:      "Täze müşderi döret"
+  customers_index:    "Müşderi sanawy"
+  customers_new:      "Müşderini döret"
+  customers_edit:     "Müşderi üýtget"
+  customers_show:     "Müşderini giňişleýin görkez"
+
+
+  equipment_type:
+    equipmentTypeName: "Enjam görnüşiniň ady"
+    equipmentTypeDesc: "Enjam görnüşiniň teswiri"
+    NewEquipment_type: "Täze enjam görnüşi"
+
+  equipment_types_index: "Enjam görnüşleriniň sanawy"
+  equipment_types_new:   "Täze enjam görnüşi"
+  equipment_types_edit:  "Enjam görnüşini üýtget"
+  equipment_types_show:  "Enjam görnüşini giňişleýin görkez"
+
+
+  item:
+    itemName:       "Enjam ady"
+    itemPrice:      "Enjam bahasy"
+    itemDescription: "Enjam aýratynlyklary"
+    NewItem:        "Täze enjam döret"
+  items_index:      "Enjamlaryň sanawy"
+  items_new:        "Enjam döret"
+  items_edit:       "Enjam üýtget"
+  items_show:       "Enjamy giňişleýin görkez"
+
+
+  model:
+    modelName: "Model ady"
+    brand_id:  "Marka ady"
+    NewModel:  "Täze model"
+
+  models_index: "Modelleriň sanawy"
+  models_new:   "Model döret"
+  models_edit:  "Modeli üýtget"
+  models_show:  "Modeli giňişleýin görkez"
+
+
+  service:
+    serviceName:        "Hyzmatyň ady"
+    servicePrice:       "Hyzmatyň bahasy"
+    serviceDescription: "Hyzmatyň teswiri"
+    NewService:         "Täze hyzmat döret"
+
+  services_index:       "Hyzmatlaryň sanawy"
+  services_new:         "Hyzmat döret"
+  services_edit:        "Hyzmaty üýtget"
+  services_show:        "Hyzmaty giňişleýin görkez"
+
+
+  ticket:
+    customer_id:             "Müşderi ady"
+    user_id:                 "Berkidilýän kişi"
+    equipmentType_id:        "Enjam görnüşleri"
+    ticketItemSerialNum:     "Seriýa belgisi"
+    brand_id:                "Marka"
+    model_id:                "Model"
+    color_id:                "Reňk"
+    ticketItemDesc:          "Enjam teswiri"
+    ticketAcceptDateTime:    "Getirilen wagty"
+    ticketPredictionDateTime: "Taýýar boljak wagty"
+    ticketReadyDateTime:     "Taýýar bolan wagty"
+    ticketProblemDesc:       "Problemmaň teswiri"
+    ticketSolutionDesc:      "Çözgüdiň teswiri"
+    NewTicket:               "Täze buýurma"
+
+  tickets_index: "Buýurmalaryň sanawy"
+  tickets_new:   "Buýurmany döret"
+  tickets_edit:  "Buýurmany üýtget"
+  tickets_show:  "Buýurmany görkez"
+
+
+  Users:
+    UserName: "Ulanyjy Ady"
+    Name:     "Ady"
+    Surname:  "Familiýasy"
+    E-mail:   "E-mail"
+    Phone:    "Telefon"
+    home:     "öý"
+    mobile:   "mobil"
+    Address:  "Salgysy"
+    Notes:    "Bellikler"
+  user:
+    NewUser:   "Täze ulanyjy döret"
+  users_index: "Ulanyjy sanawy"
+  users_new:   "Täze ulanyjy döret"
+  users_edit:  "Ulanyjy maglumatlary üýtget"
+  users_show:  "Ulanyjy maglumatlary"
+
+
+  ListingUsers: "Ulanyjylaryň sanawy"
+  Back:         "Yza"
+  Edit:         "Üýtget"
+  Show:         "Görkez"
+  Destroy:      "Poz"
+  Lists:        "Sanawlar"
+  Brands:       "Markalar"
+  Colors:       "Reňkler"
+  Customers:    "Müşderiler"
+  Equipment_types: "Enjam görnüşleri"
+  Items:        "Enjamlar"
+  Models:       "Modeller"
+  Services:     "Hyzmatlar"
+  Signin:       "Gir"
+  Tickets:      "Buýurmalar"
+  Username:     "Ulanyjy ady"
+  Password:     "Parol"
+  LoginToYourAccount: "Hasaba gir"
+  Please_select: "Saýlaň..."
+  TypeToSearch: "Gözlemek üçin ýazyň..."
+
+  Notice:
+    LoginSuccessful: "Ulgama girildi!"
+    UserSessionWasSuccessfullyUpdated: "Maglumat üýtgedildi."
+    Goodbye: "Sagboluň !"
+
+  Sidebar:
+    Users:    "Ulanyjylar"
+    Settings: "Sazlamalar"
+    Search:   "Gözleg"
+    ToggleSidebarSize: "Gapdaldaky menünyň ululygyny üýtget"
+    More:     "Giňişleýin"
+
+  Warn:
+    Areyousure: "Çyndanam?"

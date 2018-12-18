@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2680111401">
+    <data-source source="LOCAL" name="Rails RSM: development" uuid="3390092e-8e73-4da0-95ab-9caed08e387b">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/RSM_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dff5dff5dff5dff5dff5dff5dff5dff5dff5dff5dff5</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RSM: test" uuid="4b00373d-b05b-4dcf-b5a4-fa240981f5a5">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RSM_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails RSM: production" uuid="4e2856b7-090b-4235-b9cd-a5ca06a76fe6">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:RSM_production</jdbc-url>
+      <user-name>RSM</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff8dff9dfe7dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

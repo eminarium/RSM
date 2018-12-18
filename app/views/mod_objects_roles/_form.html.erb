@@ -1,0 +1,41 @@
+<%= form_for(@mod_objects_role) do |f| %>
+  <% if @mod_objects_role.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mod_objects_role.errors.count, "error") %> prohibited this mod_objects_role from being saved:</h2>
+
+      <ul>
+      <% @mod_objects_role.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mod_object_id %><br>
+    <%= f.text_field :mod_object_id %>
+  </div>
+  <div class="field">
+    <%= f.label :role_id %><br>
+    <%= f.text_field :role_id %>
+  </div>
+  <div class="field">
+    <%= f.label :canCreate %><br>
+    <%= f.check_box :canCreate %>
+  </div>
+  <div class="field">
+    <%= f.label :canRead %><br>
+    <%= f.check_box :canRead %>
+  </div>
+  <div class="field">
+    <%= f.label :canUpdate %><br>
+    <%= f.check_box :canUpdate %>
+  </div>
+  <div class="field">
+    <%= f.label :canDelete %><br>
+    <%= f.check_box :canDelete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

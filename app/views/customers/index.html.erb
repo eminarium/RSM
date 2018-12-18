@@ -1,0 +1,51 @@
+<%# <h1>Listing brands</h1> %>
+<% if (notice) %>
+    <div class="alert alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custFName") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custLName"        ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custPatronymic"   ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custEmail"        ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custPhoneHome"    ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custPhoneOffice"  ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custPhoneMobile1" ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custPhoneMobile2" ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custAddressHome"  ) %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custAddressOffice") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("customer.custDescription"  ) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.custFName         %></td>
+        <td><%= customer.custLName         %></td>
+        <td><%= customer.custPatronymic    %></td>
+        <td><%= customer.custEmail         %></td>
+        <td><%= customer.custPhoneHome     %></td>
+        <td><%= customer.custPhoneOffice   %></td>
+        <td><%= customer.custPhoneMobile1  %></td>
+        <td><%= customer.custPhoneMobile2  %></td>
+        <td><%= customer.custAddressHome   %></td>
+        <td><%= customer.custAddressOffice %></td>
+        <td><%= customer.custDescription   %></td>
+        <td><div style="float: right; align-items: center;"><%= link_to t("Show"), customer, :class => "btn btn-success" %>
+        <%= link_to t("Edit"), edit_customer_path(customer), :class => "btn btn-warning" %>
+        <%= link_to t("Destroy"), customer, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger" %></div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to t("customer.NewCustomer"), new_customer_path, :class => "btn btn-default" %>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <td><strong><%= t("item.itemName") %>:</strong></td>
+        <td><strong><%= t("item.itemPrice") %>:</strong></td>
+        <td><strong><%= t("item.itemDescription") %>:</strong></td>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @item.itemName %></td>
+        <td><%= @item.itemPrice %></td>
+        <td><%= @item.itemDescription %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_item_path(@item), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), items_path, :class => "btn btn-silc wizard-prev" %>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td><strong><%= t("color.colorName") %>:</strong></td>
+      <td><strong><%= t("color.colorRGBCode") %>:</strong></td>
+      <td></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @color.colorName %></td>
+      <td>#<%= @color.colorRGBCode %></td>
+      <td style="background-color: #<%= @color.colorRGBCode %>"></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_color_path(@color), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), colors_path, :class => "btn btn-silc wizard-prev" %>

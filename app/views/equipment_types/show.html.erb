@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <td><strong><%= t("equipment_type.equipmentTypeName") %>:</strong></td>
+        <td><strong><%= t("equipment_type.equipmentTypeDesc") %>:</strong></td>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @equipment_type.equipmentTypeName %></td>
+        <td><%= @equipment_type.equipmentTypeDesc %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_equipment_type_path(@equipment_type), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), equipment_types_path, :class => "btn btn-silc wizard-prev" %>

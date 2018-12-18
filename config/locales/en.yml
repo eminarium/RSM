@@ -1,0 +1,270 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+
+  date:
+    order:
+      - "year"
+      - "month"
+      - "day"
+
+
+  activerecord:
+
+    models:
+      brand:          "brand"
+      color:          "color"
+      customer:       "customer"
+      equipment_type: "equipment type"
+      item:           "item"
+      model:          "model"
+      service:        "service"
+      ticket:         "ticket"
+      user:           "user"
+
+    attributes:
+      brand:
+        brandName: "Brand Name"
+      color:
+        colorName:    "Color Name"
+        colorRGBCode: "RGB Code"
+      customer:
+        custFName:        "Customer name"
+        custLName:        "Customer surname"
+        custPatronymic:   "Customer patronymic"
+        custEmail:        "Customer's e-mail"
+        custPhoneHome:    "Customer home phone number"
+        custPhoneOffice:  "Customer office's phone number"
+        custPhoneMobile1: "Customer mobile phone number #1"
+        custPhoneMobile2: "Customer mobile phone number #2"
+        custAddressHome:  "Customer home address"
+        custAddressOffice: "Customer work address"
+        custDescription:  "Customer description"
+      equipment_type:
+        equipmentTypeName: "Equipment Type"
+        equipmentTypeDesc: "Equipment Type Description"
+      item:
+        itemName:        "Item Name"
+        itemPrice:       "Item's price"
+        itemDescription: "Item's description"
+      model:
+        modelName:  "Model name"
+        brand_id:   "Brand name"
+      service:
+        serviceName: "Service Name"
+        servicePrice: "Service price"
+        serviceDescription: "Service description"
+      ticket:
+        customer_id:             "Customer"
+        user_id:                 "User"
+        equipmentType_id:        "Equipment Type"
+        ticketItemSerialNum:     "Serial Number"
+        brand_id:                "Brand name"
+        model_id:                "Model name"
+        color_id:                "Color name"
+        ticketItemDesc:          "Item Description"
+        ticketAcceptDateTime:    "Accepted Date & Time"
+        ticketPredictionDateTime: "Prediction Date & Time"
+        ticketReadyDateTime:     "Ready Date & Time"
+        ticketProblemDesc:       "Problem Description"
+        ticketSolutionDesc:      "Solution Description"
+      user:
+        userLogin:        "User name"
+        userFName:        "Name"
+        userLName:        "Surname"
+        userEmail:        "E-mail"
+        userPhoneHome:    "Phone number(Home)"
+        userPhoneMobile1: "Phone number(Mobile-1)"
+        userPhoneMobile2: "Phone number(Mobile-2)"
+        userAddress:      "Address"
+        userDescription:  "Notes"
+        password:         "Password"
+        password_confirmation: "Password confirmation"
+
+
+  helpers:
+    submit:
+      create: "Create"
+      update: "Edit"
+
+
+  brand:
+    brandName: "Brand Name"
+    NewBrand:  "New Brand"
+
+  brands_index: "Brands List"
+  brands_new:   "Create brand"
+  brands_edit:  "Edit brand"
+  brands_show:  "Brand details"
+  brands_create: "Create new brand"
+
+
+  color:
+    colorName:    "Color Name"
+    colorRGBCode: "RGB Code"
+    NewColor:     "New Color"
+
+  colors_index: "Colors List"
+  colors_new:   "Create color"
+  colors_edit:  "Edit color"
+  colors_show:  "Color details"
+
+
+  customer:
+    custFName:        "Customer name"
+    custLName:        "Customer surname"
+    custPatronymic:   "Customer patronymic"
+    custEmail:        "Customer's e-mail"
+    custPhoneHome:    "Customer home phone number"
+    custPhoneOffice:  "Customer office's phone number"
+    custPhoneMobile1: "Customer mobile phone number #1"
+    custPhoneMobile2: "Customer mobile phone number #2"
+    custAddressHome:  "Customer home address"
+    custAddressOffice: "Customer work address"
+    custDescription:  "Customer description"
+    NewCustomer:      "New Customer"
+
+  customers_index: "Customers List"
+  customers_new:   "Create customer"
+  customers_edit:  "Edit customer"
+  customers_show:  "Customer details"
+
+
+  equipment_type:
+    equipmentTypeName: "Equipment type name"
+    equipmentTypeDesc: "Equipment type description"
+    NewEquipment_type: "New equipment type "
+
+  equipment_types_index: "Equipment types list"
+  equipment_types_new:   "Create equipment type"
+  equipment_types_edit:  "Edit equipment type"
+  equipment_types_show:  "Equipment type details"
+
+
+  item:
+    itemName:        "Item name"
+    itemPrice:       "Item's price"
+    itemDescription: "Item's description"
+    NewItem:         "New item"
+
+  items_index: "Items list"
+  items_new:   "Create item"
+  items_edit:  "Edit item"
+  items_show:  "Item details"
+
+
+  model:
+    modelName: "Model name"
+    brand_id:  "Brand name"
+    NewModel:  "New model"
+
+  models_index: "Models list"
+  models_new:   "Create model"
+  models_edit:  "Edit model"
+  models_show:  "Model details"
+
+
+  service:
+    serviceName:        "Service Name"
+    servicePrice:       "Service price"
+    serviceDescription: "Service description"
+    NewService:         "New Service"
+
+  services_index: "Services List"
+  services_new:   "Create service"
+  services_edit:  "Edit service"
+  services_show:  "Service details"
+
+
+  ticket:
+    customer_id:             "Customer"
+    user_id:                 "User"
+    equipmentType_id:        "Equipment Type"
+    ticketItemSerialNum:     "Serial Number"
+    brand_id:                "Brand name"
+    model_id:                "Model name"
+    color_id:                "Color name"
+    ticketItemDesc:          "Item Description"
+    ticketAcceptDateTime:    "Accepted Date & Time"
+    ticketPredictionDateTime: "Prediction Date & Time"
+    ticketReadyDateTime:     "Ready Date & Time"
+    ticketProblemDesc:       "Problem Description"
+    ticketSolutionDesc:      "Solution Description"
+
+  tickets_index: "Tickets list"
+  tickets_new:   "Create ticket"
+  tickets_edit:  "Edit ticket"
+  tickets_show:  "Ticket details"
+
+
+  Users:
+    UserName: "User name"
+    Name:     "Name"
+    Surname:  "Surname"
+    E-mail:   "E-mail"
+    Phone:    "Phone number"
+    home:     "home"
+    mobile:   "mobile"
+    Address:  "Address"
+    Notes:    "Notes"
+    NewUser:  "New user"
+
+  users_index: "Users List"
+  users_new:   "Create user"
+  users_edit:  "Edit user"
+  users_show:  "User details"
+
+  Notice:
+    LoginSuccessful: "Login successful!"
+    UserSessionWasSuccessfullyUpdated: "User session was successfully updated."
+    Goodbye: "Goodbye !"
+
+  ListingUsers: "Listing users"
+  Back:         "Back"
+  Edit:         "Edit"
+  Show:         "Show"
+  Destroy:      "Destroy"
+  Lists:        "Lists"
+  Brands:       "Brands"
+  Colors:       "Colors"
+  Customers:    "Customers"
+  Equipment_types: "Equipment Types"
+  Items:        "Items"
+  Models:       "Models"
+  Services:     "Services"
+  Signin:       "Sign in"
+  Tickets:      "Tickets"
+  Username:     "Username"
+  Password:     "Password"
+  LoginToYourAccount: "Login to your account"
+  Please_select: "Please select"
+  TypeToSearch: "Type to search..."
+
+  Sidebar:
+    Users:      "Users"
+    Settings:   "Settings"
+    Search:     "Search"
+    ToggleSidebarSize: "Toggle Sidebar Size"
+    More:       "More"
+
+  Warn:
+    Areyousure: "Are you sure?"

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <td><strong><%= t("ticket.customer_id") %>:</strong></td>
+        <td><strong><%= t("ticket.user_id") %>:</strong></td>
+        <td><strong><%= t("ticket.equipmentType_id") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketItemSerialNum") %>:</strong></td>
+        <td><strong><%= t("ticket.brand_id") %>:</strong></td>
+        <td><strong><%= t("ticket.model_id") %>:</strong></td>
+        <td><strong><%= t("ticket.color_id") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketItemDesc") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketAcceptDateTime") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketPredictionDateTime") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketReadyDateTime") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketProblemDesc") %>:</strong></td>
+        <td><strong><%= t("ticket.ticketSolutionDesc") %>:</strong></td>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @ticket.customer.custFName %></td>
+        <td><%= @ticket.user.userLogin %></td>
+        <td><%= @ticket.equipmentType.equipmentTypeName %></td>
+        <td><%= @ticket.ticketItemSerialNum %></td>
+        <td><%= @ticket.brand.brandName %></td>
+        <td><%= @ticket.model.modelName %></td>
+        <td><%= @ticket.color.colorName %></td>
+        <td><%= @ticket.ticketItemDesc %></td>
+        <td><%= @ticket.ticketAcceptDateTime %></td>
+        <td><%= @ticket.ticketPredictionDateTime %></td>
+        <td><%= @ticket.ticketReadyDateTime %></td>
+        <td><%= @ticket.ticketProblemDesc %></td>
+        <td><%= @ticket.ticketSolutionDesc %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_ticket_path(@ticket), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), tickets_path, :class => "btn btn-silc wizard-prev" %>

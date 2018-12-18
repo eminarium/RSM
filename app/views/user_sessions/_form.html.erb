@@ -1,0 +1,42 @@
+<%= form_for(@user_session) do |f| %>
+  <% if @user_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_session.errors.count, "error") %> prohibited this user_session from being saved:</h2>
+
+      <ul>
+      <% @user_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <main class="signin-wrapper">
+      <div class="tab-content">
+        <div class="tab-pane active" id="signin">
+          <h2 class="signin-brand animated-hue"><i class="glyphicon glyphicon-wrench"></i> &nbsp; <strong> KT - Service </strong></h2>
+          <form id="signinForm" action="/user_sessions" role="form">
+            <p class="lead"><%= t("LoginToYourAccount") %></p>
+            <div class="form-group">
+              <div class="input-group input-group-in">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input name="user_session[userLogin]" id="user_session_userLogin" class="form-control" placeholder="<%= t("Username")%>">
+              </div>
+            </div><!-- /.form-group -->
+            <div class="form-group">
+              <div class="input-group input-group-in">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" name="user_session[password]" id="user_session_password" class="form-control" placeholder="<%= t("Password")%>">
+              </div>
+            </div><!-- /.form-group -->
+            <div class="form-group clearfix">
+              <div class="animated-hue pull-right">
+                <button id="btnSignin" type="submit" class="btn btn-primary"><%= t("Signin")%><i class="fa fa-chevron-circle-right"></i></button>
+              </div>
+            </div><!-- /.form-group -->
+          </form><!-- /#signinForm -->
+        </div><!-- /.tab-pane -->
+      </div><!-- /.tab-content -->
+    </main><!--/#wrapper-->
+
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <td><strong><%= t("model.modelName") %>:</strong></td>
+        <td><strong><%= t("model.brand_id") %>:</strong></td>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @model.modelName %></td>
+        <td><%= @model.brand.brandName %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_model_path(@model), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), models_path, :class => "btn btn-silc wizard-prev" %>

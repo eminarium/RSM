@@ -1,0 +1,35 @@
+<h1>Listing roles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Authorizable type</th>
+      <th>Authorizable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roles.each do |role| %>
+      <tr>
+        <td><%= role.name %></td>
+        <td><%= role.authorizable_type %></td>
+        <td><%= role.authorizable_id %></td>
+        <td><%= link_to 'Show', role %></td>
+        <td><%= link_to 'Edit', edit_role_path(role) %></td>
+        <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% #ActiveRecord::Base.connection.tables.map do |model|
+%>
+  <%= #model.capitalize.singularize.camelize
+  %>
+  <% #end
+  %>
+<br>
+
+<%= link_to 'New Role', new_role_path %>

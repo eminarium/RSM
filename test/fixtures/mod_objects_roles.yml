@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mod_object_id: 
+  role_id: 
+  canCreate: false
+  canRead: false
+  canUpdate: false
+  canDelete: false
+
+two:
+  mod_object_id: 
+  role_id: 
+  canCreate: false
+  canRead: false
+  canUpdate: false
+  canDelete: false

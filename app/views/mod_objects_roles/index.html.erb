@@ -1,0 +1,35 @@
+<h1>Listing mod_objects_roles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mod object</th>
+      <th>Role</th>
+      <th>Cancreate</th>
+      <th>Canread</th>
+      <th>Canupdate</th>
+      <th>Candelete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mod_objects_roles.each do |mod_objects_role| %>
+      <tr>
+        <td><%= mod_objects_role.mod_object %></td>
+        <td><%= mod_objects_role.role %></td>
+        <td><%= mod_objects_role.canCreate %></td>
+        <td><%= mod_objects_role.canRead %></td>
+        <td><%= mod_objects_role.canUpdate %></td>
+        <td><%= mod_objects_role.canDelete %></td>
+        <td><%= link_to 'Show', mod_objects_role %></td>
+        <td><%= link_to 'Edit', edit_mod_objects_role_path(mod_objects_role) %></td>
+        <td><%= link_to 'Destroy', mod_objects_role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mod objects role', new_mod_objects_role_path %>

@@ -1,0 +1,55 @@
+<%# <h1>Listing tickets</h1> %>
+<% if (notice) %>
+    <div class="alert alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.customer_id") %></th>
+        <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.user_id") %></th>
+        <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.equipmentType_id") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketItemSerialNum") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.brand_id") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.model_id") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.color_id") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketItemDesc") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketAcceptDateTime") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketPredictionDateTime") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketReadyDateTime") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketProblemDesc") %></th>
+      <th style="text-align: center;  vertical-align: middle;"><%= t("ticket.ticketSolutionDesc") %></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+    <td><%= ticket.customer.custFName %></td>
+    <td><%= ticket.user.userLogin %></td>
+    <td><%= ticket.equipmentType.equipmentTypeName %></td>
+    <td><%= ticket.ticketItemSerialNum %></td>
+    <td><%= ticket.brand.brandName %></td>
+    <td><%= ticket.model.modelName %></td>
+    <td><%= ticket.color.colorName %></td>
+    <td><%= ticket.ticketItemDesc %></td>
+    <td><%= ticket.ticketAcceptDateTime %></td>
+    <td><%= ticket.ticketPredictionDateTime %></td>
+    <td><%= ticket.ticketReadyDateTime %></td>
+    <td><%= ticket.ticketProblemDesc %></td>
+    <td><%= ticket.ticketSolutionDesc %></td>
+        <td><div style="float: right;"><%= link_to t("Show"), ticket, :class => "btn btn-success" %>
+        <%= link_to t("Edit"), edit_ticket_path(ticket), :class => "btn btn-warning" %>
+        <%= link_to t("Destroy"), ticket, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger" %></div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to t("ticket.NewTicket"), new_ticket_path, :class => "btn btn-default" %>

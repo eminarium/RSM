@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></td>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td>
+        <strong><%= t("Users.UserName") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.UserName") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Surname") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.E-mail") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Phone") %> <%= t("Users.home") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Phone") %> <%= t("Users.mobile") %>1:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Phone") %> <%= t("Users.mobile") %>2:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Address") %>:</strong>
+      </td>
+
+      <td>
+        <strong><%= t("Users.Notes") %>:</strong>
+      </td>   </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+        <td>
+          <%= @user.userLogin %>
+        </td>
+
+        <td>
+          <%= @user.userFName %>
+        </td>
+
+        <td>
+          <%= @user.userLName %>
+        </td>
+
+        <td>
+          <%= @user.userEmail %>
+        </td>
+
+        <td>
+          <%= @user.userPhoneHome %>
+        </td>
+
+        <td>
+          <%= @user.userPhoneMobile1 %>
+        </td>
+
+        <td>
+          <%= @user.userPhoneMobile2 %>
+        </td>
+
+        <td>
+          <%= @user.userAddress %>
+        </td>
+
+        <td>
+          <%= @user.userDescription %>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to t("Edit"), edit_user_path(@user), :class => "btn btn-warning"  %> |
+<%= link_to t("Back"), users_path, :class => "btn btn-silc wizard-prev" %>

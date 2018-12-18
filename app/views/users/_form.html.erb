@@ -1,0 +1,65 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= select_tag "role_id", options_from_collection_for_select(@roles, "id", "name"), prompt: "Select something" %>
+  </div>
+  <div class="field">
+    <%= f.label :userLogin %><br>
+    <%= f.text_field :userLogin %>
+  </div>
+  <div class="field">
+    <%= f.label :userFName %><br>
+    <%= f.text_field :userFName %>
+  </div>
+  <div class="field">
+    <%= f.label :userLName %><br>
+    <%= f.text_field :userLName %>
+  </div>
+  <div class="field">
+    <%= f.label :userEmail %><br>
+    <%= f.text_field :userEmail %>
+  </div>
+  <div class="field">
+    <%= f.label :userPhoneHome %><br>
+    <%= f.text_field :userPhoneHome %>
+  </div>
+  <div class="field">
+    <%= f.label :userPhoneMobile1 %><br>
+    <%= f.text_field :userPhoneMobile1 %>
+  </div>
+  <div class="field">
+    <%= f.label :userPhoneMobile2 %><br>
+    <%= f.text_field :userPhoneMobile2 %>
+  </div>
+  <div class="field">
+    <%= f.label :userAddress %><br>
+    <%= f.text_area :userAddress %>
+  </div>
+  <div class="field">
+    <%= f.label :userDescription %><br>
+    <%= f.text_area :userDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

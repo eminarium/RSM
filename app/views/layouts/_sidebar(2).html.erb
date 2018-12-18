@@ -1,0 +1,299 @@
+<aside class="sidebar" data-control="wrapkit-sidebar">
+
+<div class="sidebar-actions">
+  <div class="sidebar-actions-pane active" id="sidebar-actions-bar">
+    <ul class="sidebar-actions-bar">
+      <li>
+        <a data-toggle="sidebar-size" href="#" title="<%= t("Sidebar.ToggleSidebarSize") %>"><i class="fa fa-bars"></i></a>
+      </li>
+      <li>
+        <a data-toggle="sidebar-actions" href="#sidebar-form-search" title="<%= t("Sidebar.Search") %>"><i class="fa fa-search"></i></a>
+      </li>
+      <li>
+        <a data-toggle="modal" href="_includes/setups.html" data-scripts="_includes/setups.js" data-target="#templateSetup" title="<%= t("Sidebar.Settings") %>"><i class="fa fa-cogs"></i></a>
+      </li>
+      <li>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="<%= t("Sidebar.More") %>">
+          <i class="fa fa-ellipsis-v"></i>
+        </a>
+        <ul class="dropdown-menu pull-right" role="menu">
+          <li><a href="#">View Site</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-profile.html">Profile</a></li>
+          <li><a href="pages-timeline.html">Timeline</a></li>
+          <li><a href="pages-email.html">Inbox</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-help.html">Help</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-locked.html">Locked</a></li>
+          <li><a href="pages-signin.html">Sign out</a></li>
+        </ul>
+      </li>
+    </ul><!--/.sidebar-actions-bar-->
+  </div><!--/.sidebar-actions-pane-->
+
+  <div class="sidebar-actions-pane" id="sidebar-form-search">
+    <form action="#" role="form" class="sidebar-form-search">
+      <div class="input-group">
+        <input class="form-control" placeholder="Type to search...">
+                                <span class="input-group-btn">
+                                    <a data-toggle="sidebar-actions" href="#sidebar-actions-bar" class="btn">
+                                      <i class="fa fa-times"></i>
+                                    </a>
+                                </span><!--/input-group-btn-->
+      </div><!--/input-group-->
+    </form><!--/form-search-->
+  </div><!--/.sidebar-actions-pane-->
+
+</div><!--/.sidebar-actions-->
+
+<nav class="sidebar-nav">
+<ul class="nav">
+<li class="nav-item">
+  <a href="index.html">
+    <i class="nav-item-icon fa fa-home"></i>
+    <span class="nav-item-text">Dashboard</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text">Get started</span>
+</li><!--/.nav-header-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-th"></i>
+    <span class="nav-item-text">Layouts</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="layout-blank.html"><span class="nav-item-text">Blank Page</span></a></li>
+    <li><a href="layout-alt1.html"><span class="nav-item-text">Alternative #1</span></a></li>
+    <li><a href="layout-alt2.html"><span class="nav-item-text">Alternative #2</span></a></li>
+    <li><a href="layout-alt3.html"><span class="nav-item-text">Sidebar Small</span></a></li>
+    <li><a href="layout-alt4.html"><span class="nav-item-text">Sidebar Right</span></a></li>
+    <li><a href="layout-custom-fixed.html"><span class="nav-item-text">Custom Fixed</span></a></li>
+    <li><a href="layout-rtl.html"><span class="nav-item-text">RTL Mode</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item <% if controller_name == 'users' %>active<% end %>">
+  <a href="/users">
+    <i class="nav-item-icon fa fa-code-fork"></i>
+    <span class="nav-item-text"><%= t("Sidebar.Users") %></span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="panels.html">
+    <i class="nav-item-icon fa fa-puzzle-piece"></i> <span class="nav-item-text">Panels</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <span class="badge">3</span>
+    <i class="nav-item-icon fa fa-list-ul"></i> <span class="nav-item-text">Level Menu</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="#"><span class="nav-item-text">Lorem</span></a></li><!--/.nav-child-item-->
+    <li>
+      <a href="#" data-toggle="nav-item-child">
+        <span class="caret"></span>
+        <span class="badge">8</span>
+        <span class="nav-item-text">Ipsum dolor</span>
+      </a>
+      <ul class="nav-item-child">
+        <li><a href="#"><span class="nav-item-text">Lorem</span></a></li><!--/.nav-child-item-->
+        <li>
+          <a href="#" data-toggle="nav-item-child">
+            <span class="caret"></span>
+            <span class="nav-item-text">Ipsum dolor</span>
+          </a>
+          <ul class="nav-item-child">
+            <li><a href="#"><span class="nav-item-text">Lorem</span></a></li><!--/.nav-child-item-->
+            <li><a href="#"><span class="nav-item-text">Ipsum dolor</span></a></li><!--/.nav-child-item-->
+            <li>
+              <a href="#">
+                <span class="badge">7</span>
+                <span class="nav-item-text">Site Amett</span>
+              </a>
+            </li><!--/.nav-child-item-->
+            <li><a href="#"><span class="nav-item-text">Nav Child</span></a></li><!--/.nav-child-item-->
+          </ul><!--/.nav-item-child (level 3)-->
+        </li>
+        <li><a href="#"><span class="nav-item-text">Site Amett</span></a></li><!--/.nav-child-item-->
+        <li><a href="#"><span class="nav-item-text">Nav Child</span></a></li><!--/.nav-child-item-->
+      </ul><!--/.nav-item-child (level 2)-->
+    </li><!--/.nav-child-item-->
+    <li>
+      <a href="#">
+        <span class="badge">11</span>
+        <span class="nav-item-text">Site Amett</span>
+      </a>
+    </li><!--/.nav-child-item-->
+    <li><a href="#"><span class="nav-item-text">Nav Child</span></a></li><!--/.nav-child-item-->
+  </ul><!--/.nav-item-child (level 1)-->
+</li><!--/.nav-item-->
+
+<li class="divider"></li><!--/.divider nav-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text">User Interfaces</span>
+</li><!--/.nav-header-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-bold"></i>
+    <span class="nav-item-text">Components</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="component-grid.html"><span class="nav-item-text">Grids</span></a></li>
+    <li><a href="component-typography.html"><span class="nav-item-text">Typography</span></a></li>
+    <li><a href="component-button.html"><span class="nav-item-text">Button</span></a></li>
+    <li><a href="component-modal.html"><span class="nav-item-text">Modal</span></a></li>
+    <li><a href="component-tooltip-popover.html"><span class="nav-item-text">Tooltip & Popover</span></a></li>
+    <li><a href="component-alert-callout.html"><span class="nav-item-text">Alert & Callout</span></a></li>
+    <li><a href="component-progressbar.html"><span class="nav-item-text">Progressbar</span></a></li>
+    <li><a href="component-label-badge.html"><span class="nav-item-text">Label & Badge</span></a></li>
+    <li><a href="component-nav-navbar.html"><span class="nav-item-text">Nav & Navbar</span></a></li>
+    <li><a href="component-tabs-collapse.html"><span class="nav-item-text">Tabs & Collapse</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-magnet"></i>
+    <span class="nav-item-text">jQuery UI</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="jui-widgets.html"><span class="nav-item-text">jUI Widgets</span></a></li>
+    <li><a href="jui-interactions.html"><span class="nav-item-text">Interactions</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="icons.html">
+    <span class="badge">4</span>
+    <i class="nav-item-icon fa fa-gift"></i> <span class="nav-item-text">Icons</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-edit"></i>
+    <span class="nav-item-text">Forms</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="form-basic.html"><span class="nav-item-text">Basic Form</span></a></li>
+    <li><a href="form-elements.html"><span class="nav-item-text">Form Elements</span></a></li>
+    <li><a href="form-uploader.html"><span class="nav-item-text">Uploader</span></a></li>
+    <li><a href="form-xeditable.html"><span class="nav-item-text">X Editable</span></a></li>
+    <li><a href="form-wizard.html"><span class="nav-item-text">Wizard</span></a></li>
+    <li><a href="form-editor.html"><span class="nav-item-text">Editor</span></a></li>
+    <li><a href="form-imagecropping.html"><span class="nav-item-text">Image Cropping</span></a></li>
+    <li><a href="form-validator.html"><span class="nav-item-text">Validator</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-bar-chart-o"></i>
+    <span class="nav-item-text">Charts</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="chart-rickshaw.html"><span class="nav-item-text">Rickshaw</span></a></li>
+    <li><a href="chart-morris.html"><span class="nav-item-text">Morris</span></a></li>
+    <li><a href="chart-inline.html"><span class="nav-item-text">Inline Chart</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-table"></i>
+    <span class="nav-item-text">Tables</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="table-basic.html"><span class="nav-item-text">Basic Table</span></a></li>
+    <li><a href="table-datatables.html"><span class="nav-item-text">Datatables</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+
+<li class="divider"></li><!--/.divider nav-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text">Development</span>
+</li><!--/.nav-header-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-code"></i>
+    <span class="nav-item-text">Extras</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="extras-animate.html"><span class="nav-item-text">Animated CSS</span></a></li>
+    <li><a href="extras-bootbox.html"><span class="nav-item-text">Bootbox</span></a></li>
+    <li><a href="extras-calendar.html"><span class="nav-item-text">Calendar</span></a></li>
+    <li><a href="extras-maps.html"><span class="nav-item-text">Maps</span></a></li>
+    <li><a href="extras-nestablelist.html"><span class="nav-item-text">Nestable List</span></a></li>
+    <li><a href="extras-session-idle.html"><span class="nav-item-text">Session Idle</span></a></li>
+    <li><a href="extras-session-timeout.html"><span class="nav-item-text">Session Timeout</span></a></li>
+    <li><a href="extras-toastr.html"><span class="nav-item-text">Toastr Notifications</span></a></li>
+    <li><a href="extras-treeview.html"><span class="nav-item-text">Tree view</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="ui-kits.html">
+    <i class="nav-item-icon fa fa-magic"></i>
+    <span class="nav-item-text">UI Kits</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-files-o"></i>
+    <span class="nav-item-text">Pages</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="pages-signin.html"><span class="nav-item-text">Signin</span></a></li>
+    <li><a href="pages-locked.html"><span class="nav-item-text">Lock Screen</span></a></li>
+    <li><a href="pages-error.html"><span class="nav-item-text">Error</span></a></li>
+    <li><a href="pages-error-alt.html"><span class="nav-item-text">Error Alt</span></a></li>
+    <li><a href="pages-profile.html"><span class="nav-item-text">Profile</span></a></li>
+    <li><a href="pages-email.html"><span class="nav-item-text">Email</span></a></li>
+    <li>
+      <a href="#" data-toggle="nav-item-child">
+        <span class="caret"></span>
+        <span class="nav-item-text">Email Template</span>
+      </a>
+      <ul class="nav-item-child">
+        <li><a target="_blank" href="email-activation.html"><span class="nav-item-text">Email Activation</span></a></li>
+        <li><a target="_blank" href="email-newsletter.html"><span class="nav-item-text">Email Newsletter</span></a></li>
+      </ul>
+    </li>
+    <li><a href="pages-timeline.html"><span class="nav-item-text">Timeline</span></a></li>
+    <li><a href="pages-gallery.html"><span class="nav-item-text">Gallery</span></a></li>
+    <li><a href="pages-pricing.html"><span class="nav-item-text">Pricing</span></a></li>
+    <li><a href="pages-invoice.html"><span class="nav-item-text">Invoice</span></a></li>
+    <li><a href="pages-landing.html"><span class="nav-item-text">Landing</span></a></li>
+    <li><a href="pages-help.html"><span class="nav-item-text">Help</span></a></li>
+    <li><a href="pages-search.html"><span class="nav-item-text">Search Result</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+</ul><!--/.nav-->
+</nav><!--/.sidebar-nav-->
+</aside><!--/.sidebar-->

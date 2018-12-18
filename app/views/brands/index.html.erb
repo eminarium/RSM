@@ -1,0 +1,33 @@
+<%# <h1>Listing brands</h1> %>
+<% if (notice) %>
+    <div class="alert alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t("brand.brandName") %></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @brands.each do |brand| %>
+      <tr>
+        <td><%= brand.brandName %></td>
+        <td><div style="float: right">
+            <%= link_to t("Show"), brand, :class => "btn btn-success" %>
+            <%= link_to t("Edit"), edit_brand_path(brand), :class => "btn btn-warning" %>
+            <%= link_to t("Destroy"), brand, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger" %>
+        </div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to t("brand.NewBrand"), new_brand_path, :class => "btn btn-default" %>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Signin : KT - Service </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+  <!-- fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= asset_path('ico/apple-touch-icon-144-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= asset_path('ico/apple-touch-icon-114-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= asset_path('ico/apple-touch-icon-72-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" href="<%= asset_path('ico/apple-touch-icon-57-precomposed.png') %>">
+  <link rel="shortcut icon" href="<%= asset_path('ico/favicon.png') %>">
+  <link rel="shortcut icon" href="<%= asset_path('ico/favicon.ico') %>">
+
+
+  <!-- VENDOR -->
+  <link rel="stylesheet" href="<%= asset_path('styles/jqueryui.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/bootstrap.min.css') %>">
+  <!-- END VENDOR -->
+
+  <!-- WRAPKIT -->
+  <link rel="stylesheet" href="<%= asset_path('styles/wrapkit.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/wrapkit-skins-all.min.css') %>">
+  <!-- END WRAPKIT -->
+
+  <!-- !IMPORTANT DEPENDENCIES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/font-awesome.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/switchery.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/toastr.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/prettify.min.css') %>">
+  <!-- END !IMPORTANT DEPENDENCIES -->
+
+  <!-- DEPENDENCIES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/typeahead.min.css') %>">
+  <!-- END DEPENDENCIES -->
+
+  <!-- PAGES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/pages-signin.min.css') %>">
+  <!-- END PAGES -->
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') %>"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js') %>"></script>
+  <![endif]-->
+</head>
+
+<body>
+<p id="notice"><%= notice %></p>
+<%= render 'form' %>
+<%# = link_to 'Back', user_sessions_path %>
+<%# Here was genuine Login-form code of bootstrap. Now it pasted to "_form.html.erb". %>
+
+<div class="signin-cr">&copy; 2015 KTSoft.</div>
+
+
+<!-- VENDOR -->
+<script src="<%= asset_path('scripts/jquery.min.js') %>"></script>
+<script src="<%= asset_path('scripts/bootstrap.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery-ui.min.js') %>"></script>
+<!-- END VENDOR -->
+
+
+<!-- !IMPORTANT DEPENDENCIES -->
+<script src="<%= asset_path('scripts/jquery.ui.touch-punch.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.cookie.min.js') %>"></script>
+<script src="<%= asset_path('scripts/screenfull.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.autogrowtextarea.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.nicescroll.min.js') %>"></script>
+<script src="<%= asset_path('scripts/bootbox.min.js') %>"></script>
+<script src="<%= asset_path('scripts/switchery.min.js') %>"></script>
+<script src="<%= asset_path('scripts/toastr.min.js') %>"></script>
+<script src="<%= asset_path('scripts/components-setup.min.js') %>"></script>
+<!-- END !IMPORTANT DEPENDENCIES -->
+
+<!-- WRAPKIT -->
+<script src="<%= asset_path('scripts/wrapkit-utils.min.js') %>"></script>
+<!-- END WRAPKIT -->
+
+<!-- DEPENDENCIES -->
+<script src="<%= asset_path('scripts/jquery.vegas.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.validate.min.js') %>"></script>
+<script src="<%= asset_path('scripts/additional-methods.min.js') %>"></script>
+<script src="<%= asset_path('scripts/handlebars.min.js') %>"></script>
+<script src="<%= asset_path('scripts/typeahead.bundle.min.js') %>"></script>
+<!-- END DEPENDENCIES -->
+
+
+<!-- Dummy script -->
+<script type="text/javascript" src="<%= asset_path('scripts/demo/pages-signin-demo.js') %>"></script>
+
+<!-- Google Analytics: change UA-48454066-1 to be your site's ID. Or remove it if you want -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='../../../../../www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-48454066-1');ga('send','pageview');
+</script>
+
+</body>
+
+<!-- Mirrored from wrapui.com/items/preview/wrapkit/1.0/pages-signin.html by HTTrack Website Copier/3.x [XR&CO'2006], Sat, 31 Jan 2015 13:24:06 GMT -->
+</html>

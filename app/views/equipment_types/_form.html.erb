@@ -1,0 +1,25 @@
+<%= form_for(@equipment_type) do |f| %>
+  <% if @equipment_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equipment_type.errors.count, "error") %> prohibited this equipment_type from being saved:</h2>
+
+      <ul>
+      <% @equipment_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :equipmentTypeName %><br>
+    <%= f.text_field :equipmentTypeName %>
+  </div>
+  <div class="field">
+    <%= f.label :equipmentTypeDesc %><br>
+    <%= f.text_area :equipmentTypeDesc %>
+  </div>
+  <div class="actions">
+    <%= f.submit :class => 'btn btn-primary' %>
+  </div>
+<% end %>

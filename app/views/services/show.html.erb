@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <td><strong><%= t("service.serviceName") %>:</strong></td>
+        <td><strong><%= t("service.servicePrice") %>:</strong></td>
+        <td><strong><%= t("service.serviceDescription") %>:</strong></td>
+      </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @service.serviceName %></td>
+        <td><%= @service.servicePrice %></td>
+        <td><%= @service.serviceDescription %></td>
+        </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_service_path(@service), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), services_path, :class => "btn btn-silc wizard-prev" %>

@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+       <td><strong><%= t("brand.brandName") %>:</strong></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @brand.brandName %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_brand_path(@brand), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), brands_path, :class => "btn btn-silc wizard-prev" %>

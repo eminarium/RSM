@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td><strong><%= t("customer.custFName"        ) %>:</strong></td>
+      <td><strong><%= t("customer.custLName"        ) %>:</strong></td>
+      <td><strong><%= t("customer.custPatronymic"   ) %>:</strong></td>
+      <td><strong><%= t("customer.custEmail"        ) %>:</strong></td>
+      <td><strong><%= t("customer.custPhoneHome"    ) %>:</strong></td>
+      <td><strong><%= t("customer.custPhoneOffice"  ) %>:</strong></td>
+      <td><strong><%= t("customer.custPhoneMobile1" ) %>:</strong></td>
+      <td><strong><%= t("customer.custPhoneMobile2" ) %>:</strong></td>
+      <td><strong><%= t("customer.custAddressHome"  ) %>:</strong></td>
+      <td><strong><%= t("customer.custAddressOffice") %>:</strong></td>
+      <td><strong><%= t("customer.custDescription"  ) %>:</strong></td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @customer.custFName         %></td>
+      <td><%= @customer.custLName         %></td>
+      <td><%= @customer.custPatronymic    %></td>
+      <td><%= @customer.custEmail         %></td>
+      <td><%= @customer.custPhoneHome     %></td>
+      <td><%= @customer.custPhoneOffice   %></td>
+      <td><%= @customer.custPhoneMobile1  %></td>
+      <td><%= @customer.custPhoneMobile2  %></td>
+      <td><%= @customer.custAddressHome   %></td>
+      <td><%= @customer.custAddressOffice %></td>
+      <td><%= @customer.custDescription   %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to t("Edit"), edit_customer_path(@customer), :class => "btn btn-warning" %> |
+<%= link_to t("Back"), customers_path, :class => "btn btn-silc wizard-prev" %>

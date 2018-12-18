@@ -1,0 +1,35 @@
+<%# <h1>Listing brands</h1> %>
+<% if (notice) %>
+    <div class="alert alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t("service.serviceName") %></th>
+      <th><%= t("service.servicePrice") %></th>
+      <th><%= t("service.serviceDescription") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.serviceName %></td>
+        <td><%= service.servicePrice %></td>
+        <td><%= service.serviceDescription %></td>
+        <td><div style="float: right"><%= link_to t("Show"), service, :class => "btn btn-success" %>
+        <%= link_to t("Edit"), edit_service_path(service), :class => "btn btn-warning" %>
+        <%= link_to t("Destroy"), service, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger" %></div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to t("service.NewService"), new_service_path, :class => "btn btn-default" %>

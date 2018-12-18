@@ -1,0 +1,36 @@
+<%# <h1>Listing colors</h1> %>
+<% if (notice) %>
+    <div class="alert alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+      <p id="notice"><%= notice %></p>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t("color.colorName") %></th>
+      <th><%= t("color.colorRGBCode") %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @colors.each do |color| %>
+      <tr>
+        <td><%= color.colorName %></td>
+        <td>#<%= color.colorRGBCode %></td>
+        <td style="background-color: #<%= color.colorRGBCode%>"></td>
+        <td><div style="float: right"><%= link_to t("Show"), color, :class => "btn btn-success" %>
+        <%= link_to t("Edit"), edit_color_path(color), :class => "btn btn-warning" %>
+        <%= link_to t("Destroy"), color, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger" %></div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%#= Color.column_names %>
+<%#= User.column_names %>
+<%#= link_to t("color.NewColor"), new_color_path, :class => "btn btn-default" %>

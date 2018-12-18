@@ -1,0 +1,1 @@
+json.extract! @ticket, :id, :customer_id, :user_id, :equipmentType_id, :ticketItemSerialNum, :brand_id, :model_id, :color_id, :ticketItemDesc, :ticketAcceptDateTime, :ticketPredictionDateTime, :ticketReadyDateTime, :ticketProblemDesc, :ticketSolutionDesc, :created_at, :updated_at

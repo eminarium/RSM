@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RSM</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#script type="text/javascript" src="jscolor/jscolor.js"></script> %>
+  <%#= stylesheet_link_tag :all %>
+  <%#= javascript_include_tag :all %>
+  <%= csrf_meta_tags %>
+
+  <!-- fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= asset_path('ico/apple-touch-icon-144-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= asset_path('ico/apple-touch-icon-114-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%= asset_path('ico/apple-touch-icon-72-precomposed.png') %>">
+  <link rel="apple-touch-icon-precomposed" href="<%= asset_path('ico/apple-touch-icon-57-precomposed.png') %>">
+  <link rel="shortcut icon" href="<%= asset_path('ico/favicon.png') %>">
+  <link rel="shortcut icon" href="<%= asset_path('ico/favicon.ico') %>">
+
+  <!-- VENDOR -->
+  <link rel="stylesheet" href="<%= asset_path('styles/jqueryui.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/bootstrap.min.css') %>">
+  <!-- END VENDOR -->
+
+  <!-- WRAPKIT -->
+  <link rel="stylesheet" href="<%= asset_path('styles/wrapkit.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/wrapkit-skins-all.min.css') %>">
+  <!-- END WRAPKIT -->
+
+  <!-- !IMPORTANT DEPENDENCIES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/font-awesome.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/switchery.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/toastr.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/prettify.min.css') %>">
+  <!-- END !IMPORTANT DEPENDENCIES -->
+
+  <!-- DEPENDENCIES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/daterangepicker.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/morris.min.css') %>">
+  <link rel="stylesheet" href="<%= asset_path('styles/charts-inline.min.css') %>">
+  <!-- END DEPENDENCIES -->
+
+  <!-- PAGES -->
+  <link rel="stylesheet" href="<%= asset_path('styles/pages-profile.min.css') %>">
+  <!-- END PAGES -->
+
+
+
+  <!-- JUST DEMO: Remove this css in your project -->
+  <link rel="stylesheet" href="<%= asset_path('styles/demo.min.css') %>">
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+<main id="wrapper" class="wrapkit-wrapper">
+
+<%= render 'layouts/header' %>
+
+<%= render 'layouts/sidebar' %>
+
+<section class="content-wrapper">
+
+<div class="content-header">
+  <div class="pull-right hidden-xs">
+    <button id="dashboardRange" class="btn btn-sm btn-icon btn-icon-left btn-ascon pull-right">
+      <i class="fa fa-calendar"></i>
+      <span>Please select Date Range</span>
+      <b class="fa fa-angle-down"></b>
+    </button>
+  </div>
+  <h1 class="content-title">
+    <%#= params[:controller] %>
+    <%#= controller_name %>
+    <%= t "#{controller_name}_#{action_name}" %>
+    <%# if controller_name = 'users' %>
+        <%#= t("ListingUsers") %>
+    <%#end%>
+  </h1>
+</div><!-- /.content-header -->
+
+<div class="content-actions">
+  <div class="pull-right">
+    <%#= <a href="# class="btn btn-default btn-sm"><i class="fa fa-plus fa-fw"></i> Widgets</a> %>
+    <%= link_to t("#{controller_name.singularize}.New#{controller_name.singularize.capitalize}"),  url_for(:controller => params[:controller], :action => 'new'), :class => "btn btn-default" %>
+  </div>
+  <a href="#" class="btn btn-default btn-sm"><i class="fa fa-envelope-o fa-fw"></i> Email</a>
+  <div class="btn-group">
+    <a href="#" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-share-alt fa-fw"></i> Share
+      <span class="fa fa-angle-down"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#"><i class="fa fa-group fa-fw"></i> Share to Group</a></li>
+      <li><a href="#"><i class="fa fa-link fa-fw"></i> Share the Link</a></li>
+      <li><a href="#"><i class="fa fa-rss fa-fw"></i> Share to Timeline</a></li>
+      <li class="divider"></li>
+      <li><a href="#">More Actions</a></li>
+    </ul>
+  </div><!-- /.btn-group -->
+  <div class="btn-group">
+    <a href="#" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-download fa-fw"></i> Exports
+      <span class="fa fa-angle-down"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#"><i class="fa fa-file-excel-o fa-fw"></i> Excel</a></li>
+      <li><a href="#"><i class="fa fa-file-image-o fa-fw"></i> Image</a></li>
+      <li><a href="#"><i class="fa fa-file-pdf-o fa-fw"></i> PDF</a></li>
+      <li class="divider"></li>
+      <li><a href="#">More Actions</a></li>
+    </ul>
+  </div><!-- /.btn-group -->
+</div><!-- /.content-actions -->
+
+<div class="content">
+
+
+
+<!-- <div id="nav">
+  <%# if current_user %>
+      <%#= link_to "Edit Profile", edit_user_path(current_user.id)%>
+      <%#= link_to "Logout", :logout%>
+  <%# else %>
+      <%#= link_to "Register", new_user_path%> |
+      <%#= link_to "Login", :login %>
+  <%# end %>
+</div> -->
+<div class="panel panel-default">
+    <%= yield %>
+</div>
+
+<%# = render 'layouts/dashboard' %>
+
+<%= render 'layouts/footer' %>
+</main> <!-- /#wrapper -->
+
+<!-- Modal Setups -->
+<!-- Modal -->
+<div class="modal fade" id="templateSetup" tabindex="-1" role="dialog" aria-labelledby="templateSetupLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<!-- VENDOR -->
+<script src="<%= asset_path('scripts/jquery.min.js') %>"></script>
+<script src="<%= asset_path('scripts/bootstrap.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery-ui.min.js') %>"></script>
+<!-- END VENDOR -->
+
+
+<!-- !IMPORTANT DEPENDENCIES -->
+<script src="<%= asset_path('scripts/jquery.ui.touch-punch.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.cookie.min.js') %>"></script>
+<script src="<%= asset_path('scripts/screenfull.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.autogrowtextarea.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.nicescroll.min.js') %>"></script>
+<script src="<%= asset_path('scripts/bootbox.min.js') %>"></script>
+<script src="<%= asset_path('scripts/switchery.min.js') %>"></script>
+<script src="<%= asset_path('scripts/toastr.min.js') %>"></script>
+<script src="<%= asset_path('scripts/components-setup.min.js') %>"></script>
+<!-- END !IMPORTANT DEPENDENCIES -->
+
+
+<!-- WRAPKIT -->
+<script src="<%= asset_path('scripts/wrapkit-utils.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-layout.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-header.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-sidebar.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-content.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-footer.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-panel.min.js') %>"></script>
+<script src="<%= asset_path('scripts/wrapkit-setup.min.js') %>"></script>
+<!-- END WRAPKIT -->
+
+
+<!-- DEPENDENCIES -->
+<script src="<%= asset_path('scripts/moment.min.js') %>"></script>
+<script src="<%= asset_path('scripts/daterangepicker.min.js') %>"></script>
+<script src="<%= asset_path('scripts/raphael.min.js') %>"></script>
+<script src="<%= asset_path('scripts/morris.min.js') %>"></script>
+<script src="<%= asset_path('scripts/jquery.easypiechart.min.js') %>"></script>
+<!-- END DEPENDENCIES -->
+
+
+<!-- Dummy script -->
+<script type="text/javascript" src="<%= asset_path('scripts/demo/dashboard-demo.js') %>"></script>
+
+
+<!-- Google Analytics: change UA-48454066-1 to be your site's ID. Or remove it if you want -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ru:
+
+  date:
+    order:
+      - "year"
+      - "month"
+      - "day"
+
+
+  activerecord:
+
+    models:
+      brand:          "бренд"
+      color:          "цвет"
+      customer:       "клиент"
+      equipment_type: "вид оборудования"
+      item:           "предмет"
+      model:          "модель"
+      service:        "сервис"
+      ticket:         "билет"
+      user:           "пользователь"
+
+    attributes:
+      brand:
+        brandName: "Имя бренда"
+      color:
+        colorName:    "Имя цвета"
+        colorRGBCode: "Код RGB"
+      customer:
+        custFName:        "Имя клиента"
+        custLName:        "Фамилия клиента"
+        custPatronymic:   "Отчество клиента"
+        custEmail:        "E-mail клиента"
+        custPhoneHome:    "Домашний номер клиента"
+        custPhoneOffice:  "Рабочий номер клиента"
+        custPhoneMobile1: "Мобильный номер клиента #1"
+        custPhoneMobile2: "Мобильный номер клиента #2"
+        custAddressHome:  "Домашний адрес клиента"
+        custAddressOffice: "Рабочий адрес клиента"
+        custDescription:  "Описание клиента"
+      equipment_type:
+        equipmentTypeName: "Вид оборудования"
+        equipmentTypeDesc: "Описание вида оборудования"
+      item:
+        itemName:        "Имя предмета"
+        itemPrice:       "Цена предмета"
+        itemDescription: "Детали предмета"
+      model:
+        modelName:  "Имя модели"
+        brand_id:   "Имя бренда"
+      service:
+        serviceName: "Имя сервиса"
+        servicePrice: "Цена сервиса"
+        serviceDescription: "Описание сервиса"
+      ticket:
+        customer_id:             "Имя клиента"
+        user_id:                 "Имя пользователя"
+        equipmentType_id:        "Вид оборудования"
+        ticketItemSerialNum:     "Серийный номер"
+        brand_id:                "Имя бренда"
+        model_id:                "Имя модели"
+        color_id:                "Имя цвета"
+        ticketItemDesc:          "Описание оборудования"
+        ticketAcceptDateTime:    "Принятое время"
+        ticketPredictionDateTime: "Приблизительное время готовности"
+        ticketReadyDateTime:     "Время завершения"
+        ticketProblemDesc:       "Описание проблемы"
+        ticketSolutionDesc:      "Описание решения"
+      user:
+        userLogin:        "Имя пользователя"
+        userFName:        "Имя"
+        userLName:        "Фамилия"
+        userEmail:        "E-mail"
+        userPhoneHome:    "Телефон(домашний)"
+        userPhoneMobile1: "Телефон(сотовый-1)"
+        userPhoneMobile2: "Телефон(сотовый-2)"
+        userAddress:      "Адрес"
+        userDescription:  "Заметки"
+        password:         "Password"
+        password_confirmation: "Подтверждение пароля"
+
+
+  helpers:
+    submit:
+      create: "Создать"
+      update: "Изменить"
+
+
+  brand:
+    brandName: "Имя бренда"
+    NewBrand: "Новый бренд"
+
+  brands_index: "Список брендов"
+  brands_new: "Создать бренд"
+  brands_edit: "Изменить бренд"
+  brands_show: "Данные бренда"
+  brands_create: "Создать бренд"
+
+  color:
+    colorName: "Имя цвета"
+    colorRGBCode: "Код RGB"
+    NewColor: "Новый цвет"
+
+  colors_index: "Список цветов"
+  colors_new: "Создать цвет"
+  colors_edit: "Изменить цвет"
+  colors_show: "Детали цвета"
+
+
+  customer:
+    custFName:        "Имя клиента"
+    custLName:        "Фамилия клиента"
+    custPatronymic:   "Отчество клиента"
+    custEmail:        "E-mail клиента"
+    custPhoneHome:    "Домашний номер клиента"
+    custPhoneOffice:  "Рабочий номер клиента"
+    custPhoneMobile1: "Мобильный номер клиента #1"
+    custPhoneMobile2: "Мобильный номер клиента #2"
+    custAddressHome:  "Домашний адрес клиента"
+    custAddressOffice: "Рабочий адрес клиента"
+    custDescription:  "Описание клиента"
+    NewCustomer:      "Новый клиент"
+
+  customers_index: "Список клиентов"
+  customers_new:   "Создать клиента"
+  customers_edit:  "Изменить клиента"
+  customers_show:  "Детали клиента"
+
+
+  equipment_type:
+    equipmentTypeName: "Имя вида оборудования"
+    equipmentTypeDesc: "Детали вида оборудования"
+    NewEquipment_type: "Новый вид оборудования"
+
+  equipment_types_index: "Список видов оборудования"
+  equipment_types_new:   "Создать вид оборудования"
+  equipment_types_edit:  "Изменить вид оборудования"
+  equipment_types_show:  "Детали вида оборудования"
+
+
+  item:
+    itemName:        "Имя предмета"
+    itemPrice:       "Цена предмета"
+    itemDescription: "Детали предмета"
+    NewItem:         "Новый предмет"
+
+  items_index: "Список предметов"
+  items_new:   "Создать предмет"
+  items_edit:  "Изменить предмет"
+  items_show:  "Детали предмета"
+
+
+  model:
+    modelName: "Имя модели"
+    brand_id:  "Имя бренда"
+    NewModel:  "Новая модель"
+
+  models_index: "Список моделей"
+  models_new:   "Создать модель"
+  models_edit:  "Изменить модель"
+  models_show:  "Детали модели"
+
+
+  service:
+    serviceName:        "Имя сервиса"
+    servicePrice:       "Цена сервиса"
+    serviceDescription: "Описание сервиса"
+    NewService:         "Новый сервис"
+
+  services_index: "Список сервисов"
+  services_new:   "Создать сервис"
+  services_edit:  "Изменить сервис"
+  services_show:  "Детали сервиса"
+
+
+  ticket:
+    customer_id:             "Имя клиента"
+    user_id:                 "Имя пользователя"
+    equipmentType_id:        "Вид оборудования"
+    ticketItemSerialNum:     "Серийный номер"
+    brand_id:                "Имя бренда"
+    model_id:                "Имя модели"
+    color_id:                "Имя цвета"
+    ticketItemDesc:          "Описание оборудования"
+    ticketAcceptDateTime:    "Принятое время"
+    ticketPredictionDateTime: "Приблизительное время готовности"
+    ticketReadyDateTime:     "Время завершения"
+    ticketProblemDesc:       "Описание проблемы"
+    ticketSolutionDesc:      "Описание решения"
+    NewTicket:               "Новый заказ"
+
+  tickets_index: "Список заказов"
+  tickets_new:   "Создать заказ"
+  tickets_edit:  "Изменить заказ"
+  tickets_show:  "Детали заказа"
+
+
+  Users:
+    UserName: "Имя пользователя"
+    Name:     "Имя"
+    Surname:  "Фамилия"
+    E-mail:   "E-mail"
+    Phone:    "Телефон"
+    home:     "домашний"
+    mobile:   "сотовый"
+    Address:  "Адрес"
+    Notes:    "Заметки"
+    NewUser:  "Новый пользователь"
+
+  users_index: "Список пользователей"
+  users_new:   "Создать пользователя"
+  users_edit:  "Изменить пользователя"
+  users_show:  "Пользовательские данные"
+
+  Notice:
+    LoginSuccessful: "Удачно вошли!"
+    UserSessionWasSuccessfullyUpdated: "Удачно обновилось."
+    Goodbye: "Пока !"
+
+  ListingUsers: "Список пользователей"
+  Back:         "Назад"
+  Edit:         "Изменить"
+  Show:         "Показать"
+  Destroy:      "Удалить"
+  Lists:        "Списки"
+  Brands:       "Бренды"
+  Colors:       "Цвета"
+  Customers:    "Клиенты"
+  Equipment_types: "Виды оборудования"
+  Items:        "Предметы"
+  Models:       "Модели"
+  Services:     "Сервисы"
+  Signin:       "Войти"
+  Tickets:      "Заказы"
+  Username:     "Имя пользователя"
+  Password:     "Парол"
+  LoginToYourAccount: "Войти в свой акаунт"
+  Please_select: "Пожалуйста выберите"
+  TypeToSearch: "Напишите для поиска..."
+
+  Sidebar:
+    Users:            "Пользователи"
+    Settings:         "Настройки"
+    Search:           "Поиск"
+    ToggleSidebarSize: "Переключить размер бокового меню"
+    More:             "Расширенно"
+
+  Warn:
+    Areyousure: "Вы уверены?"

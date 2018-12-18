@@ -1,0 +1,7 @@
+<%# <h1>Editing color</h1> %>
+
+<%= render 'form' %>
+<div style="background-color:#<%= @color.colorRGBCode%>; width: 30px; height: 30px;"></div>
+<%= link_to t("Show"), @color, :class => "btn btn-success" %> |
+<%= link_to t("Back"), colors_path, :class => "btn btn-silc wizard-prev" %>
+

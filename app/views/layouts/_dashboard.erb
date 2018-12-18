@@ -1,0 +1,596 @@
+<!-- DASHBOARD
+================================================== -->
+<!--USE THIS FOR SHORTCUT OR TABS MENU-->
+<div class="help-block text-center">
+  <a class="btn-call active" href="#">
+    <i class="fa fa-bar-chart-o"></i><br><span>Resume</span>
+  </a>
+  <a class="btn-call" href="#">
+    <i class="fa fa-envelope"></i><br><span>Email</span>
+  </a>
+  <a class="btn-call" href="#">
+    <span class="badge badge-success">16</span>
+    <i class="fa fa-users"></i><br><span>New Users</span>
+  </a>
+  <a class="btn-call" href="#">
+    <i class="fa fa-edit"></i><br><span>Contents</span>
+  </a>
+  <a class="btn-call" href="#">
+    <span class="badge badge-warning">142</span>
+    <i class="fa fa-map-marker"></i><br><span>Timeline</span>
+  </a>
+  <a class="btn-call" href="#">
+    <i class="fa fa-heart"></i><br><span>Popularity</span>
+  </a>
+</div><!-- /END OF SHORTCUT/TABS MENU -->
+
+
+
+<!-- RESUME CHARTS -->
+<div class="row">
+  <div class="col-md-6 text-center" style="margin-top:60px">
+    <div class="easy-pie-chart">
+      <div class="easyPieChart" data-rotate="180" data-percent="75" data-scalecolor="false" data-barcolor="#107360" data-size="120" data-linewidth="6">
+        <div class="easyPieChart-inner">
+          <strong>2,724</strong>
+          <small class="text-muted">Visitors</small>
+        </div>
+      </div>
+      <p><i class="fa fa-caret-up fa-fw text-success" rel="tooltip" title="Greater than last month" data-context="success"></i> Target 3,000</p>
+    </div><!-- /.easy-pie-chart -->
+    <div class="easy-pie-chart">
+      <div class="easyPieChart" data-rotate="180" data-percent="35" data-scalecolor="false" data-barcolor="#20638F" data-size="120" data-linewidth="6">
+        <div class="easyPieChart-inner">
+          <strong>1,492</strong>
+          <small class="text-muted">Orders</small>
+        </div>
+      </div>
+      <p><i class="fa fa-caret-down fa-fw text-danger" rel="tooltip" title="Less than last month" data-context="danger"></i> Target 1,800</p>
+    </div><!-- /.easy-pie-chart -->
+    <div class="easy-pie-chart">
+      <div class="easyPieChart" data-rotate="180" data-percent="20" data-scalecolor="false" data-barcolor="#703688" data-size="120" data-linewidth="6">
+        <div class="easyPieChart-inner">
+          <strong>836K</strong>
+          <small class="text-muted">Revenue</small>
+        </div>
+      </div>
+      <p><i class="fa fa-caret-up fa-fw text-success" rel="tooltip" title="Greater than last month" data-context="success"></i> Target 2M</p>
+    </div><!-- /.easy-pie-chart -->
+  </div><!-- /.cols -->
+
+  <div class="col-md-6">
+    <!-- Tab panes -->
+    <div class="tab-content" style="overflow:hidden">
+      <div class="tab-pane active" id="tab-visitor">
+        <div id="chart-visitor" style="height:280px"></div>
+      </div>
+      <div class="tab-pane" id="tab-order">
+        <div id="chart-order" style="height:280px"></div>
+      </div>
+      <div class="tab-pane" id="tab-revenue">
+        <div id="chart-revenue" style="height:280px"></div>
+      </div>
+    </div>
+    <div id="chart-tabs" role="tablist" class="help-block text-center">
+      <a href="#tab-visitor" data-chart="chartBar" class="btn btn-nofill btn-greentur active">Visitors</a>
+      <a href="#tab-order" data-chart="chartArea" class="btn btn-nofill btn-belpet">Orders</a>
+      <a href="#tab-revenue" data-chart="chartArea2" class="btn btn-nofill btn-wistam">Revenue</a>
+    </div>
+  </div><!-- /.cols -->
+</div><!-- /.row -->
+<!-- END OF RESUME CHARTS -->
+
+<hr>
+
+<!-- WIDGETS SPACE, PLACE SOME UIKITS HERE OR MAKE YOUR OWN KITS ;) -->
+<div class="row">
+<div class="col-md-6">
+  <!-- TOP RANK (users, items or others) KIT -->
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h4>
+        Weekly list of the most popular users
+        <br>
+        <small class="text-muted">Updated at 07:16 am</small>
+      </h4>
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces11.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h5 class="media-heading">Emma Greene</h5>
+          <div class="progress progress-md">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1500" style="width: 84.33%">
+              <div class="progress-text">1,265 sales</div>
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces12.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h5 class="media-heading">Júlia Márta</h5>
+          <div class="progress progress-md">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1500" style="width: 74.8%">
+              <div class="progress-text">1,122 sales</div>
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces13.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h5 class="media-heading">Tom Bonnet</h5>
+          <div class="progress progress-md">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1500" style="width: 69.27%">
+              <div class="progress-text">1,039 sales</div>
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces14.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h5 class="media-heading">Naia Gómez</h5>
+          <div class="progress progress-md">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1500" style="width: 64.8%">
+              <div class="progress-text">972 sales</div>
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces15.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <h5 class="media-heading">Gary Lewis</h5>
+          <div class="progress progress-md">
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="1500" style="width: 58.73%">
+              <div class="progress-text">881 sales</div>
+            </div><!-- /.progress-bar -->
+          </div><!-- /.progress -->
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+
+      <br> <!--Just line-->
+
+    </div><!-- /.panel-body -->
+  </div><!-- /.panel -->
+  <!-- /END TOP RANK KIT -->
+</div><!-- /.cols -->
+
+
+<div class="col-md-6">
+  <!-- RECENTS ORDER KITS -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-actions-input">
+        <a href="#" class="btn btn-default btn-sm">View all orders</a>
+      </div>
+      <h3 class="panel-title">Recent Orders</h3>
+    </div><!-- /.panel-heading -->
+    <div class="panel-body">
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces1.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+              <a href="#" rel="tooltip" title="approve" class="btn btn-default"><i class="fa fa-check fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="invoice" class="btn btn-default"><i class="fa fa-credit-card fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="delete" class="btn btn-default"><i class="fa fa-times fa-fw"></i></a>
+            </div><!-- /.btn-group -->
+          </div><!-- /.pull-right -->
+          <h5 class="media-heading"><a href="#">Purchase 4 items ($80)</a></h5>
+          <div class="text-muted">
+            <small><i class="fa fa-user fa-fw"></i> Rose Davies</small>&nbsp;&nbsp;&nbsp;
+            <small><i class="fa fa-user fa-fw"></i> 16 minutes</small>
+          </div>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <hr>
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces2.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+              <a href="#" rel="tooltip" title="approve" class="btn btn-default"><i class="fa fa-check fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="invoice" class="btn btn-default"><i class="fa fa-credit-card fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="delete" class="btn btn-default"><i class="fa fa-times fa-fw"></i></a>
+            </div><!-- /.btn-group -->
+          </div><!-- /.pull-right -->
+          <h5 class="media-heading"><a href="#">Purchase an item - Wrapkit Admin Template</a></h5>
+          <div class="text-muted">
+            <small><i class="fa fa-user fa-fw"></i> Dilara Elmas</small>&nbsp;&nbsp;&nbsp;
+            <small><i class="fa fa-user fa-fw"></i> 20 minutes</small>
+          </div>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <hr>
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces3.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+              <a href="#" rel="tooltip" title="approve" class="btn btn-default"><i class="fa fa-check fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="invoice" class="btn btn-default"><i class="fa fa-credit-card fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="delete" class="btn btn-default"><i class="fa fa-times fa-fw"></i></a>
+            </div><!-- /.btn-group -->
+          </div><!-- /.pull-right -->
+          <h5 class="media-heading"><a href="#">Payment for invoice #141213</a></h5>
+          <div class="text-muted">
+            <small><i class="fa fa-user fa-fw"></i> George Florianu</small>&nbsp;&nbsp;&nbsp;
+            <small><i class="fa fa-user fa-fw"></i> 42 minutes</small>
+          </div>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <hr>
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces4.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+              <a href="#" rel="tooltip" title="approve" class="btn btn-default"><i class="fa fa-check fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="invoice" class="btn btn-default"><i class="fa fa-credit-card fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="delete" class="btn btn-default"><i class="fa fa-times fa-fw"></i></a>
+            </div><!-- /.btn-group -->
+          </div><!-- /.pull-right -->
+          <h5 class="media-heading"><a href="#">Purchase an item - Wrapkit Admin Template</a></h5>
+          <div class="text-muted">
+            <small><i class="fa fa-user fa-fw"></i> Gustavo Francisco</small>&nbsp;&nbsp;&nbsp;
+            <small><i class="fa fa-user fa-fw"></i> 1 hours</small>
+          </div>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+      <hr>
+      <div class="media">
+        <a class="pull-left kit-avatar kit-avatar-36" href="#">
+          <img class="media-object" src="images/dummy/uifaces5.jpg" alt="">
+        </a>
+        <div class="media-body">
+          <div class="pull-right">
+            <div class="btn-group btn-group-xs">
+              <a href="#" rel="tooltip" title="approve" class="btn btn-default"><i class="fa fa-check fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="invoice" class="btn btn-default"><i class="fa fa-credit-card fa-fw"></i></a>
+              <a href="#" rel="tooltip" title="delete" class="btn btn-default"><i class="fa fa-times fa-fw"></i></a>
+            </div><!-- /.btn-group -->
+          </div><!-- /.pull-right -->
+          <h5 class="media-heading"><a href="#">Purchase an item - Wrapkit Admin Template</a></h5>
+          <div class="text-muted">
+            <small><i class="fa fa-user fa-fw"></i> Bastien Guichard</small>&nbsp;&nbsp;&nbsp;
+            <small><i class="fa fa-user fa-fw"></i> 1 hours</small>
+          </div>
+        </div><!-- /.media-body -->
+      </div><!-- /.media -->
+    </div><!-- /.panel-body -->
+  </div><!-- /.panel -->
+  <!-- END OF RECENTS ORDER KITS -->
+</div><!-- /.cols -->
+
+<div class="clearfix"></div>
+
+<div class="col-md-6">
+  <!-- TODO KIT -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-actions-input pull-left">
+        <form id="addTodo" action="#">
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="selectAllTodo">
+            <label for="selectAllTodo">&nbsp;</label>
+          </div>
+          <input id="todoText" class="form-control input-sm" placeholder="type todo and enter..." style="display:inline-block;width:auto">
+          <input id="todoDate" class="form-control input-sm hide" placeholder="pick date and enter..." style="display:inline-block;width:auto">
+          <button id="todoDateBtn" rel="tooltip" title="pick todo date" type="button" class="btn btn-default btn-sm"><i class="fa fa-clock-o"></i></button>
+          <button id="removeAllTodo" rel="tooltip" title="remove todo" type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+          <button type="submit" class="btn btn-default btn-sm hide"><i class="fa fa-plus"></i></button>
+        </form>
+      </div><!-- /.panel-actions-input -->
+      <h3 class="panel-title">&nbsp;</h3><!-- /panel-title -->
+    </div><!-- /.panel-heading -->
+
+    <div id="todo-lists" class="todo-lists nice-scroll" data-scroll-wrapper=".scroll-wrapper" style="height:409px">
+      <div class="scroll-wrapper">
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> 09:00 am</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo1">
+            <label for="todo1">Change class on UI Kits</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> 11:30 am</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo2">
+            <label for="todo2">Buy Tea and Coffe</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> 03:00 pm</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo3">
+            <label for="todo3">Update lates wireframe</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> Tomorrow</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo4">
+            <label for="todo4">Metting team</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> Tomorrow</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo5">
+            <label for="todo5">Finishing on design brief</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> Tomorrow</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo6">
+            <label for="todo6">Build an app to client</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> Tomorrow</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo7">
+            <label for="todo7">Metting Team</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> On week</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo5">
+            <label for="todo5">Finishing on design brief</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> On week</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo6">
+            <label for="todo6">Build an app to client</label>
+          </div>
+        </div><!-- /.kit-todo -->
+        <div class="kit-todo">
+          <div class="kit-todo-actions pull-right">
+            <a data-toggle="todo-remove" rel="tooltip" title="remove" data-container="body" href="#"><i class="fa fa-times"></i></a>
+          </div>
+          <div class="kit-todo-hover pull-right">
+            <span class="label label-info"><i class="fa fa-clock-o fa-fw"></i> On week</span>
+            <a data-toggle="todo-complete" rel="tooltip" title="toggle complete" data-container="body" href="#"><i class="fa fa-check"></i></a>
+          </div>
+          <div class="nice-checkbox nice-checkbox-inline">
+            <input type="checkbox" id="todo7">
+            <label for="todo7">Metting Team</label>
+          </div>
+        </div><!-- /.kit-todo -->
+      </div><!-- /.scroll-wrapper -->
+    </div><!-- /.todo-lists -->
+  </div><!-- /.panel -->
+  <!-- END TODO KIT -->
+</div><!-- /.cols -->
+
+
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <ul class="panel-actions">
+        <li><a href="#" data-toggle="panel-expand"><i class="fa fa-expand"></i></a></li>
+        <li><a href="#" data-toggle="panel-collapse"><i class="fa fa-angle-down"></i></a></li>
+        <li><a href="#" data-toggle="panel-close"><i class="fa fa-times"></i></a></li>
+      </ul>
+      <h3 class="panel-title">Activity</h3>
+    </div>
+    <div class="panel-body nice-scroll" data-scroll-wrapper=".scroll-wrapper" style="height:409px">
+      <!-- Activity -->
+      <div class="activity-wrapper scroll-wrapper">
+        <div class="activity-list">
+          <div class="activity-status">
+            <div class="pull-right text-muted">
+              <strong>Update</strong> <small>2 hours ago</small>
+            </div>
+            <a href="#" class="activity-icon bg-belpet" rel="tooltip-right" title="read changelog">
+              <i class="fa fa-refresh"></i>
+            </a><!-- /.activity-icon -->
+            <div class="activity-description">
+              <strong><a href="#">Bent</a></strong> just update his project <strong><a href="#">Wrapkit - Admin template</a></strong>
+            </div><!-- /.activity-description -->
+          </div><!-- /.activity-status -->
+
+          <div class="activity-comments">
+            <div class="media">
+              <p><strong><a href="#">Igor Dias</a></strong> <small class="text-muted">1 hours ago</small></p>
+              <a class="kit-avatar kit-avatar-32 pull-left" href="#">
+                <img src="images/dummy/uifaces15.jpg" alt="user">
+              </a>
+              <div class="media-body">
+                Tortor tristique, vestibulum ipsum. Pellentesque aliquet mauris, nunc pellentesque. Nascetur dis sollicitudin, mattis phasellus scelerisque. Hac vivamus, hac sapien semper, dapibus sed at. Nonummy neque, mattis massa malesuada. Suspendisse accumsan aptent.
+              </div>
+            </div><!-- /.media as comment-item -->
+
+            <div class="media">
+              <p><strong><a href="#">Marcel Illés</a></strong> <small class="text-muted">2 hours ago</small></p>
+              <a class="kit-avatar kit-avatar-32 pull-left" href="#">
+                <img src="images/dummy/uifaces11.jpg" alt="user">
+              </a>
+              <div class="media-body">
+                Ligula sed consectetuer, quisque urna. Vel eu, vehicula aliquam, nostra ultricies. Ligula at. Blandit mauris dolor, auctor non, in felis. Nec feugiat eu, id ridiculus aenean, cursus lacus sapien. Nibh dolor tincidunt.
+              </div>
+            </div><!-- /.media as comment-item -->
+
+            <div class="media">
+              <p><strong><a href="#">Adam Jensen</a></strong> <small class="text-muted">2 hours ago</small></p>
+              <a class="kit-avatar kit-avatar-32 pull-left" href="#">
+                <img src="images/dummy/uifaces6.jpg" alt="user">
+              </a>
+              <div class="media-body">
+                Rutrum id amet, sem sem quis, dictum donec ante. Sem wisi lectus. Malesuada sapien. In aliquam lorem. Nibh quis, fermentum porta.
+              </div>
+            </div><!-- /.media as comment-item -->
+          </div><!-- /.activity-comments -->
+
+          <div class="activity-form">
+            <form role="form" action="#">
+              <div class="form-group">
+                <div class="input-group input-group-in">
+                  <!-- <div class="input-group-addon input-group-textarea">
+                      <img class="img-circle activity-avatar" src="images/dummy/profile.jpg" alt="user">
+                  </div> -->
+                  <textarea class="form-control no-resize autogrow" placeholder="Add a comment..."></textarea>
+                  <div class="input-group-btn input-group-textarea">
+                    <label class="btn btn-default">
+                      <i class="fa fa-paperclip"></i>
+                      <input class="hide" type="file" multiple="multiple">
+                    </label>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div><!-- /input-group-in -->
+              </div><!-- /.form-group -->
+            </form><!-- /form -->
+          </div><!-- /.activity-form -->
+        </div><!-- /.activity-list -->
+
+        <div class="activity-list">
+          <div class="activity-status">
+            <div class="pull-right text-muted">
+              <strong>Update</strong> <small>4 hours ago</small>
+            </div>
+            <a href="#" class="activity-icon bg-nephem" rel="tooltip-right" title="go to file">
+              <i class="fa fa-cloud-upload"></i>
+            </a><!-- /.activity-icon -->
+            <div class="activity-description">
+              <strong><a href="#">Nidia Djuvara</a></strong> just Upload a revision design <strong><a href="#">#D7043</a></strong>
+            </div><!-- /.activity-description -->
+          </div><!-- /.activity-status -->
+
+          <div class="activity-comments">
+            <div class="media">
+              <p><strong><a href="#">Isabella Huber</a></strong> <small class="text-muted">2 hours ago</small></p>
+              <a class="kit-avatar kit-avatar-32 pull-left" href="#">
+                <img src="images/dummy/uifaces14.jpg" alt="user">
+              </a>
+              <div class="media-body">
+                Sem egestas morbi. Nullam placerat nunc. Ut eget, urna nibh dui. Interdum volutpat, vestibulum cras elementum. Id ornare sed, tortor massa. Habitant mollis, quis vivamus.
+                <hr>
+                <div class="pull-right"><a href="#">download all</a></div>
+                <p class="lead">Attachments <small class="text-muted">(3 files, 1.21 MB)</small></p>
+                <ul class="list-unstyled">
+                  <li class="clearfix">
+                    <div class="pull-right">
+                      <a href="#">view</a>&nbsp;&nbsp;&nbsp;
+                      <a href="#">download</a>
+                    </div>
+                    <p>Design_brief.zip <small>(654 KB)</small></p>
+                  </li>
+                  <li class="clearfix">
+                    <div class="pull-right">
+                      <a href="#">view</a>&nbsp;&nbsp;&nbsp;
+                      <a href="#">download</a>
+                    </div>
+                    <p>Revision_191213.jpg <small>(184 KB)</small></p>
+                  </li>
+                </ul><!-- /list-attachments -->
+              </div>
+            </div><!-- /.media as comment-item -->
+          </div><!-- /.activity-comments -->
+
+          <div class="activity-form">
+            <form role="form" action="#">
+              <div class="form-group">
+                <div class="input-group input-group-in">
+                  <textarea class="form-control no-resize autogrow" placeholder="Add a comment..."></textarea>
+                  <div class="input-group-btn input-group-textarea">
+                    <label class="btn btn-default">
+                      <i class="fa fa-paperclip"></i>
+                      <input class="hide" type="file" multiple="multiple">
+                    </label>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div><!-- /input-group-in -->
+              </div><!-- /.form-group -->
+            </form><!-- /form -->
+          </div><!-- /.activity-form -->
+        </div><!-- /.activity-list -->
+        <p class="text-center">
+          <a href="#" class="btn btn-default btn-xs">Load more...</a>
+        </p>
+      </div><!-- /.activity-wrapper -->
+    </div><!-- /.panel-body -->
+  </div><!-- /.panel -->
+</div><!-- /.cols -->
+</div><!-- /.row -->
+
+</div><!-- /.content -->
+</section><!--/.content-wrapper-->

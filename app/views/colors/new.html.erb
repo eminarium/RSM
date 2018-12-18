@@ -1,0 +1,27 @@
+<%# <h1>New color</h1> %>
+
+<%= render 'form' %>
+
+<input class="color" value="66ff00">
+
+
+<div class="panel-body" style="text-align: left;">
+  <ul class="panel-actions panel-actions-alt">
+    <li class="dropdown open">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Change color"><i class="fa fa-tint"></i></a>
+      <ul class="dropdown-menu dropdown-inline pull-right" role="menu">
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="none" class="color-pick bordered bg-default" data-original-title="default"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="greentur" class="color-pick bg-greentur" data-original-title="greentur"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="nephem" class="color-pick bg-nephem" data-original-title="nephem"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="belpet" class="color-pick bg-belpet" data-original-title="belpet"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="wistam" class="color-pick bg-wistam" data-original-title="wistam"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="osun" class="color-pick bg-osun" data-original-title="osun"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="pumcar" class="color-pick bg-pumcar" data-original-title="pumcar"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="pomeal" class="color-pick bg-pomeal" data-original-title="pomeal"></a></li>
+        <li><a rel="tooltip" title="" data-toggle="panel-color" data-color="ascon" class="color-pick bg-ascon" data-original-title="ascon"></a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<%= link_to t("Back"), colors_path, :class => "btn btn-silc wizard-prev" %>

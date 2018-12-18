@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mod object:</strong>
+  <%= @mod_objects_role.mod_object %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @mod_objects_role.role %>
+</p>
+
+<p>
+  <strong>Cancreate:</strong>
+  <%= @mod_objects_role.canCreate %>
+</p>
+
+<p>
+  <strong>Canread:</strong>
+  <%= @mod_objects_role.canRead %>
+</p>
+
+<p>
+  <strong>Canupdate:</strong>
+  <%= @mod_objects_role.canUpdate %>
+</p>
+
+<p>
+  <strong>Candelete:</strong>
+  <%= @mod_objects_role.canDelete %>
+</p>
+
+<%= link_to 'Edit', edit_mod_objects_role_path(@mod_objects_role) %> |
+<%= link_to 'Back', mod_objects_roles_path %>

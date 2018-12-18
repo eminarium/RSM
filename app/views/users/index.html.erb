@@ -1,0 +1,47 @@
+<%# <h1>Listing users</h1>%>
+<% if (notice) %>
+<div class="alert alert-success fade in">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+  <p id="notice"><%= notice %></p>
+</div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t("Users.UserName") %></th>
+      <th><%= t("Users.Name") %></th>
+      <th><%= t("Users.Surname") %></th>
+      <th><%= t("Users.E-mail") %></th>
+      <th><%= t("Users.Phone") %> (<%= t("Users.home") %>)</th>
+      <th><%= t("Users.Phone") %> (<%= t("Users.mobile") %>-1)</th>
+      <th><%= t("Users.Phone") %> (<%= t("Users.mobile") %>-2)</th>
+      <th><%= t("Users.Address") %></th>
+      <th><%= t("Users.Notes") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.userLogin %></td>
+        <td><%= user.userFName %></td>
+        <td><%= user.userLName %></td>
+        <td><%= user.userEmail %></td>
+        <td><%= user.userPhoneHome %></td>
+        <td><%= user.userPhoneMobile1 %></td>
+        <td><%= user.userPhoneMobile2 %></td>
+        <td><%= user.userAddress %></td>
+        <td><%= user.userDescription %></td>
+        <td><div style="float: right"><%= link_to t("Show"), user, :class => "btn btn-success" %>
+        <%= link_to t("Edit"), edit_user_path(user), :class => "btn btn-warning"  %>
+        <%= link_to t("Destroy"), user, method: :delete, data: { confirm: t("Warn.Areyousure") }, :class => "btn btn-danger"  %></div></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%#= link_to t("Users.NewUser"), new_user_path, :class => "btn btn-default" %>

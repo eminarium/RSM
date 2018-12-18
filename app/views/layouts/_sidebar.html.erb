@@ -1,0 +1,210 @@
+<aside class="sidebar" data-control="wrapkit-sidebar">
+
+<div class="sidebar-actions">
+  <div class="sidebar-actions-pane active" id="sidebar-actions-bar">
+    <ul class="sidebar-actions-bar">
+      <li>
+        <a data-toggle="sidebar-size" href="#" title="<%= t("Sidebar.ToggleSidebarSize") %>"><i class="fa fa-bars"></i></a>
+      </li>
+      <li>
+        <a data-toggle="sidebar-actions" href="#sidebar-form-search" title="<%= t("Sidebar.Search") %>"><i class="fa fa-search"></i></a>
+      </li>
+      <li>
+        <a data-toggle="modal" href="_includes/setups.html" data-scripts="_includes/setups.js" data-target="#templateSetup" title="<%= t("Sidebar.Settings") %>"><i class="fa fa-cogs"></i></a>
+      </li>
+      <li>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="<%= t("Sidebar.More") %>">
+          <i class="fa fa-ellipsis-v"></i>
+        </a>
+        <ul class="dropdown-menu pull-right" role="menu">
+          <li><a href="#">View Site</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-profile.html">Profile</a></li>
+          <li><a href="pages-timeline.html">Timeline</a></li>
+          <li><a href="pages-email.html">Inbox</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-help.html">Help</a></li>
+          <li class="divider"></li>
+          <li><a href="pages-locked.html">Locked</a></li>
+          <li><a href="pages-signin.html">Sign out</a></li>
+        </ul>
+      </li>
+    </ul><!--/.sidebar-actions-bar-->
+  </div><!--/.sidebar-actions-pane-->
+
+  <div class="sidebar-actions-pane" id="sidebar-form-search">
+    <form action="#" role="form" class="sidebar-form-search">
+      <div class="input-group">
+        <input class="form-control" placeholder="<%= t("TypeToSearch") %>">
+                                <span class="input-group-btn">
+                                    <a data-toggle="sidebar-actions" href="#sidebar-actions-bar" class="btn">
+                                      <i class="fa fa-times"></i>
+                                    </a>
+                                </span><!--/input-group-btn-->
+      </div><!--/input-group-->
+    </form><!--/form-search-->
+  </div><!--/.sidebar-actions-pane-->
+
+</div><!--/.sidebar-actions-->
+
+<nav class="sidebar-nav">
+<ul class="nav">
+<li class="nav-item">
+  <a href="index.html">
+    <i class="nav-item-icon fa fa-home"></i>
+    <span class="nav-item-text">Dashboard</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text">Get started</span>
+</li><!--/.nav-header-->
+
+<li class="nav-item <% if controller_name == 'users' %>active<% end %>">
+  <a href="/users">
+    <i class="nav-item-icon fa fa-user"></i>
+    <span class="nav-item-text"><%= t("Sidebar.Users") %></span>
+  </a>
+</li><!--/.nav-item-->
+
+
+<li class="divider"></li><!--/.divider nav-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text"><%= t("Lists") %></span>
+</li><!--/.nav-header-->
+
+  <li class="nav-item <% if controller_name == 'brands' %>active<% end %>">
+    <a href="/brands">
+      <i class="nav-item-icon fa fa-ticket"></i>
+      <span class="nav-item-text"><%= t("Brands") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'colors' %>active<% end %>">
+    <a href="/colors">
+      <i class="nav-item-icon fa fa-bar-chart-o"></i>
+      <span class="nav-item-text"><%= t("Colors") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'customers' %>active<% end %>">
+    <a href="/customers">
+      <i class="nav-item-icon fa fa-users"></i>
+      <span class="nav-item-text"><%= t("Customers") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'items' %>active<% end %>">
+    <a href="/items">
+      <i class="nav-item-icon fa fa-ge"></i>
+      <span class="nav-item-text"><%= t("Items") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'services' %>active<% end %>">
+    <a href="/services">
+      <i class="nav-item-icon fa fa-magic"></i>
+      <span class="nav-item-text"><%= t("Services") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+
+
+
+  <li class="nav-item <% if controller_name == 'equipment_types' %>active<% end %>">
+    <a href="/equipment_types">
+      <i class="nav-item-icon fa fa-cubes"></i>
+      <span class="nav-item-text"><%= t("Equipment_types") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'models' %>active<% end %>">
+    <a href="/models">
+      <i class="nav-item-icon fa fa-tags"></i>
+      <span class="nav-item-text"><%= t("Models") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+  <li class="nav-item <% if controller_name == 'tickets' %>active<% end %>">
+    <a href="/tickets">
+      <i class="nav-item-icon fa fa-files-o"></i>
+      <span class="nav-item-text"><%= t("Tickets") %></span>
+    </a>
+  </li><!--/.nav-item-->
+
+
+
+
+
+<li class="divider"></li><!--/.divider nav-->
+
+<li class="nav-header">
+  <a class="nav-header-icon" href="#"><i class="fa fa-wrench"></i></a>
+  <span class="nav-header-text">Development</span>
+</li><!--/.nav-header-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-code"></i>
+    <span class="nav-item-text">Extras</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="extras-animate.html"><span class="nav-item-text">Animated CSS</span></a></li>
+    <li><a href="extras-bootbox.html"><span class="nav-item-text">Bootbox</span></a></li>
+    <li><a href="extras-calendar.html"><span class="nav-item-text">Calendar</span></a></li>
+    <li><a href="extras-maps.html"><span class="nav-item-text">Maps</span></a></li>
+    <li><a href="extras-nestablelist.html"><span class="nav-item-text">Nestable List</span></a></li>
+    <li><a href="extras-session-idle.html"><span class="nav-item-text">Session Idle</span></a></li>
+    <li><a href="extras-session-timeout.html"><span class="nav-item-text">Session Timeout</span></a></li>
+    <li><a href="extras-toastr.html"><span class="nav-item-text">Toastr Notifications</span></a></li>
+    <li><a href="extras-treeview.html"><span class="nav-item-text">Tree view</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="ui-kits.html">
+    <i class="nav-item-icon fa fa-magic"></i>
+    <span class="nav-item-text">UI Kits</span>
+  </a>
+</li><!--/.nav-item-->
+
+<li class="nav-item">
+  <a href="#" data-toggle="nav-item-child">
+    <span class="caret"></span>
+    <i class="nav-item-icon fa fa-files-o"></i>
+    <span class="nav-item-text">Pages</span>
+  </a>
+  <ul class="nav-item-child">
+    <li><a href="pages-signin.html"><span class="nav-item-text">Signin</span></a></li>
+    <li><a href="pages-locked.html"><span class="nav-item-text">Lock Screen</span></a></li>
+    <li><a href="pages-error.html"><span class="nav-item-text">Error</span></a></li>
+    <li><a href="pages-error-alt.html"><span class="nav-item-text">Error Alt</span></a></li>
+    <li><a href="pages-profile.html"><span class="nav-item-text">Profile</span></a></li>
+    <li><a href="pages-email.html"><span class="nav-item-text">Email</span></a></li>
+    <li>
+      <a href="#" data-toggle="nav-item-child">
+        <span class="caret"></span>
+        <span class="nav-item-text">Email Template</span>
+      </a>
+      <ul class="nav-item-child">
+        <li><a target="_blank" href="email-activation.html"><span class="nav-item-text">Email Activation</span></a></li>
+        <li><a target="_blank" href="email-newsletter.html"><span class="nav-item-text">Email Newsletter</span></a></li>
+      </ul>
+    </li>
+    <li><a href="pages-timeline.html"><span class="nav-item-text">Timeline</span></a></li>
+    <li><a href="pages-gallery.html"><span class="nav-item-text">Gallery</span></a></li>
+    <li><a href="pages-pricing.html"><span class="nav-item-text">Pricing</span></a></li>
+    <li><a href="pages-invoice.html"><span class="nav-item-text">Invoice</span></a></li>
+    <li><a href="pages-landing.html"><span class="nav-item-text">Landing</span></a></li>
+    <li><a href="pages-help.html"><span class="nav-item-text">Help</span></a></li>
+    <li><a href="pages-search.html"><span class="nav-item-text">Search Result</span></a></li>
+  </ul>
+</li><!--/.nav-item-->
+
+</ul><!--/.nav-->
+</nav><!--/.sidebar-nav-->
+</aside><!--/.sidebar-->
