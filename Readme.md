@@ -12,3 +12,8 @@ Modules included in the software :
 - Report print for repair/service details (Ticket)
 
 For any questions write to : merdan.durdiyev@gmail.com
+
+==== Tools used ====
+
+Framework : Ruby on Rails
+Database : PostgreSQL
